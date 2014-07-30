@@ -1,0 +1,1594 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Rocket Dashboard</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/pace/themes/pace-theme-flat-top.css">
+        <link rel="stylesheet" href="bower_components/messenger/build/css/messenger.css">
+        <link rel="stylesheet" href="bower_components/messenger/build/css/messenger-theme-flat.css">
+        <link rel="stylesheet" href="bower_components/bower-jvectormap/jquery-jvectormap-1.2.2.css">
+        <link rel="stylesheet" href="bower_components/dynatable/jquery.dynatable.css">
+        <link rel="stylesheet" href="bower_components/morris.js/morris.css">
+        <link rel="stylesheet" href="bower_components/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css">
+        <link rel="stylesheet" href="bower_components/bootstrap-datepicker/css/datepicker3.css">
+        <link rel="stylesheet" href="bower_components/ion.rangeSlider/css/ion.rangeSlider.css">
+        <link rel="stylesheet" href="bower_components/ion.rangeSlider/css/ion.rangeSlider.skinNice.css">
+        <link rel="stylesheet" href="bower_components/jquery-minicolors/jquery.minicolors.css">
+        <link rel="stylesheet" href="bower_components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css">
+        <link rel="stylesheet" href="bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css">
+        <link rel="stylesheet" href="bower_components/icheck/skins/all.css">
+        <link rel="stylesheet" href="bower_components/bootstrap-select/bootstrap-select.min.css">
+        <link rel="stylesheet" href="bower_components/bootstrapValidator/dist/css/bootstrapValidator.min.css">
+        <link rel="stylesheet" href="bower_components/ladda-bootstrap/dist/ladda.min.css">
+        <link rel="stylesheet" href="bower_components/bootstrap3-wysihtml5-bower/dist/bootstrap3-wysihtml5.min.css">
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/rocket-dashboard.css -->
+        <link rel="stylesheet" href="styles/rocket-dashboard.css">
+        <!-- endbuild -->
+        <!-- build:js scripts/modernizr.js -->
+        <!-- bower:js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+    </head>
+    <body>
+
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="navmenu navmenu-inverse navmenu-fixed-left" role="navigation">
+
+            <div class="navmenu-holder">
+
+                <div class="user-box">
+                    <a href="#"><img src="images/avatars/bruce-wayne.jpg" alt="username" class="img-circle"></a>
+                    <h5>Hello, Bruce!</h5>
+                </div> <!-- /.user-box -->
+
+                <ul class="nav navmenu-nav top-level">
+
+                    <li class="active"><a href="index.html"><i class="fa fa-dashboard"></i><span>Dashboard</span></a> <span class="badge alert-success">New</span></li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-laptop"></i><span>UI Elements <b class="caret"></b></span></a>
+                        <ul class="dropdown-menu navmenu-nav">
+                            <li><a href="general.html">General</a></li>
+                            <li><a href="icons.html">Icons</a></li>
+                            <li><a href="buttons.html">Buttons</a></li>
+                            <li><a href="forms.html">Forms</a></li>
+                            <li><a href="tables.html">Tables</a></li>
+                        </ul>
+                    </li> <!-- /.dropdown -->
+
+                    <li><a href="containers.html"><i class="fa fa-th"></i><span>Containers</span></a> <span class="badge alert-danger">4</span></li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-rocket"></i><span>Examples <b class="caret"></b></span></a>
+                        <ul class="dropdown-menu navmenu-nav">
+                            <li><a href="profile.html">User Profile</a></li>
+                            <li><a href="settings.html">Settings</a></li>
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="register.html">Register</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Advanced Examples</li>
+                            <li><a href="invoice.html">Invoice</a></li>
+                            <li><a href="lock.html">Lockscreeen</a></li>
+                            <li><a href="blank.html">Blank</a></li>
+                        </ul>
+                    </li> <!-- /.dropdown -->
+
+                </ul> <!-- /.navmenu-nav -->
+
+            </div> <!-- /.navmenu-holder -->
+
+        </div> <!-- /.navmenu -->
+
+        <div class="wrapper">
+
+            <div class="top-nav navbar navbar-default" role="navigation">
+
+                <div class="container-fluid">
+
+                    <div class="navbar-header">
+
+                        <a class="navbar-brand off-canvas-toggle" href="#" data-toggle="offcanvas" data-autohide="true" data-recalc="false" data-disable-scrolling="true" data-target=".navmenu" data-canvas=".wrapper">
+                            <i class="fa fa-bars"></i> Rocket Dashboard</a>
+
+                    </div> <!-- /.navbar-header -->
+
+                    <div class="navbar-right">
+
+                        <ul class="nav navbar-nav">
+
+                            <li class="dropdown">
+
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i><span class="badge alert-danger">1</span></a>
+
+                                <ul class="dropdown-menu dropdown-messages">
+                                    <li class="dropdown-header">You have 1 new message</li>
+
+                                    <li>
+
+                                        <div class="dropdown-holder">
+
+                                            <ul class="nav">
+
+                                                <li class="message alert-info">
+                                                    <a href="#">
+                                                        <span class="message-time"><i class="fa fa-clock-o"></i> 5 min</span>
+                                                        <span class="message-title">Victor Stone</span>
+                                                        <span class="message-excerpt">Lorem ipsum dolor st amet...</span>
+                                                    </a>
+                                                </li> <!-- /.message -->
+
+                                                <li class="message">
+                                                    <a href="#">
+                                                        <span class="message-time"><i class="fa fa-clock-o"></i> 1 hour</span>
+                                                        <span class="message-title">Diana Prince</span>
+                                                        <span class="message-excerpt">Lorem ipsum dolor st amet...</span>
+                                                    </a>
+                                                </li> <!-- /.message -->
+
+                                                <li class="message">
+                                                    <a href="#">
+                                                        <span class="message-time"><i class="fa fa-clock-o"></i> 2 days</span>
+                                                        <span class="message-title">Wally West</span>
+                                                        <span class="message-excerpt">Lorem ipsum dolor st amet...</span>
+                                                    </a>
+                                                </li> <!-- /.message -->
+
+                                                <li class="message">
+                                                    <a href="#">
+                                                        <span class="message-time"><i class="fa fa-clock-o"></i> 5 days</span>
+                                                        <span class="message-title">Clark Kent</span>
+                                                        <span class="message-excerpt">Lorem ipsum dolor st amet...</span>
+                                                    </a>
+                                                </li> <!-- /.message -->
+
+                                                <li class="message">
+                                                    <a href="#">
+                                                        <span class="message-time"><i class="fa fa-clock-o"></i> 5 days</span>
+                                                        <span class="message-title">Diana Prince</span>
+                                                        <span class="message-excerpt">Lorem ipsum dolor st amet...</span>
+                                                    </a>
+                                                </li> <!-- /.message -->
+
+                                            </ul> <!-- /.nav -->
+
+                                        </div> <!-- /.dropdown-holder -->
+
+                                    </li>
+                                    <li class="dropdown-footer"><a href="#">See All Messages</a></li>
+                                </ul> <!-- /.dropdown-messages -->
+
+                            </li> <!-- /.dropdown -->
+
+                            <li class="dropdown">
+
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-warning"></i><span class="badge alert-warning">9</span></a>
+
+                                <ul class="dropdown-menu dropdown-notifications">
+                                    <li class="dropdown-header">You have 9 notifications</li>
+                                    <li>
+
+                                        <div class="dropdown-holder">
+
+                                            <ul class="nav">
+
+                                                <li class="notification">
+                                                    <a href="#">
+                                                        <i class="fa fa-info-circle"></i>
+                                                        <span class="notification-excerpt">Lorem ipsum dolor st amet...</span>
+                                                    </a>
+                                                </li> <!-- /.notification -->
+
+                                                <li class="notification alert-success">
+                                                    <a href="#">
+                                                        <i class="fa fa-check-circle"></i>
+                                                        <span class="notification-excerpt">Lorem ipsum dolor st amet...</span>
+                                                    </a>
+                                                </li> <!-- /.notification -->
+
+                                                <li class="notification">
+                                                    <a href="#">
+                                                        <i class="fa fa-info-circle"></i>
+                                                        <span class="notification-excerpt">Lorem ipsum dolor st amet...</span>
+                                                    </a>
+                                                </li> <!-- /.notification -->
+
+                                                <li class="notification">
+                                                    <a href="#">
+                                                        <i class="fa fa-info-circle"></i>
+                                                        <span class="notification-excerpt">Lorem ipsum dolor st amet...</span>
+                                                    </a>
+                                                </li> <!-- /.notification -->
+
+                                                <li class="notification">
+                                                    <a href="#">
+                                                        <i class="fa fa-info-circle"></i>
+                                                        <span class="notification-excerpt">Lorem ipsum dolor st amet...</span>
+                                                    </a>
+                                                </li> <!-- /.notification -->
+
+                                                <li class="notification alert-danger">
+                                                    <a href="#">
+                                                        <i class="fa fa-ban"></i>
+                                                        <span class="notification-excerpt">Lorem ipsum dolor st amet...</span>
+                                                    </a>
+                                                </li> <!-- /.notification -->
+
+                                                <li class="notification alert-warning">
+                                                    <a href="#">
+                                                        <i class="fa fa-exclamation-circle"></i>
+                                                        <span class="notification-excerpt">Lorem ipsum dolor st amet...</span>
+                                                    </a>
+                                                </li> <!-- /.notification -->
+
+                                                <li class="notification">
+                                                    <a href="#">
+                                                        <i class="fa fa-info-circle"></i>
+                                                        <span class="notification-excerpt">Lorem ipsum dolor st amet...</span>
+                                                    </a>
+                                                </li> <!-- /.notification -->
+
+                                                <li class="notification">
+                                                    <a href="#">
+                                                        <i class="fa fa-info-circle"></i>
+                                                        <span class="notification-excerpt">Lorem ipsum dolor st amet...</span>
+                                                    </a>
+                                                </li> <!-- /.notification -->
+
+                                            </ul> <!-- /.nav -->
+
+                                        </div> <!-- /.dropdown-holder -->
+
+                                    </li>
+                                    <li class="dropdown-footer"><a href="#">See All Notifications</a></li>
+                                </ul> <!-- /.dropdown-notifications -->
+
+                            </li> <!-- /.dropdown -->
+
+                            <li class="dropdown">
+
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tasks"></i><span class="badge alert-info">6</span></a>
+
+                                <ul class="dropdown-menu dropdown-tasks">
+                                    <li class="dropdown-header">There are 6 pending tasks</li>
+                                    <li>
+
+                                        <div class="dropdown-holder">
+
+                                            <ul class="nav">
+
+                                                <li class="task">
+                                                    <a href="#">
+                                                        <span class="task-title">Lorem ipsum dolor st amet... <small>10%</small></span>
+                                                        <div class="progress xs">
+                                                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                            <span class="sr-only">60% Complete</span>
+                                                          </div>
+                                                        </div>
+                                                    </a>
+                                                </li> <!-- /.task -->
+
+                                                <li class="task">
+                                                    <a href="#">
+                                                        <span class="task-title">Lorem ipsum dolor st amet... <small>10%</small></span>
+                                                        <div class="progress xs">
+                                                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                            <span class="sr-only">60% Complete</span>
+                                                          </div>
+                                                        </div>
+                                                    </a>
+                                                </li> <!-- /.task -->
+
+                                                <li class="task">
+                                                    <a href="#">
+                                                        <span class="task-title">Lorem ipsum dolor st amet... <small>10%</small></span>
+                                                        <div class="progress xs">
+                                                          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                            <span class="sr-only">60% Complete</span>
+                                                          </div>
+                                                        </div>
+                                                    </a>
+                                                </li> <!-- /.task -->
+
+                                                <li class="task">
+                                                    <a href="#">
+                                                        <span class="task-title">Lorem ipsum dolor st amet... <small>10%</small></span>
+                                                        <div class="progress xs">
+                                                          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                            <span class="sr-only">60% Complete</span>
+                                                          </div>
+                                                        </div>
+                                                    </a>
+                                                </li> <!-- /.task -->
+
+                                                <li class="task">
+                                                    <a href="#">
+                                                        <span class="task-title">Lorem ipsum dolor st amet... <small>10%</small></span>
+                                                        <div class="progress xs">
+                                                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                            <span class="sr-only">60% Complete</span>
+                                                          </div>
+                                                        </div>
+                                                    </a>
+                                                </li> <!-- /.task -->
+
+                                                <li class="task">
+                                                    <a href="#">
+                                                        <span class="task-title">Lorem ipsum dolor st amet... <small>10%</small></span>
+                                                        <div class="progress xs">
+                                                          <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                            <span class="sr-only">60% Complete</span>
+                                                          </div>
+                                                        </div>
+                                                    </a>
+                                                </li> <!-- /.task -->
+
+                                            </ul> <!-- /.nav -->
+
+                                        </div> <!-- /.dropdown-holder -->
+
+                                    </li>
+                                    <li class="dropdown-footer"><a href="#">See All Tasks</a></li>
+                                </ul> <!-- /.dropdown-tasks -->
+
+                            </li> <!-- /.dropdown -->
+
+                        </ul> <!-- /.navbar-nav -->
+
+                    </div> <!-- /.navbar-right -->
+
+                </div> <!-- /.container-fluid -->
+
+            </div> <!-- /.top-nav -->
+
+            <nav class="bottom-nav navbar navbar-default" role="navigation">
+
+                <div class="container-fluid">
+
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bottom-nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div> <!-- /.navbar-header -->
+
+                    <div class="collapse navbar-collapse" id="bottom-nav-collapse">
+
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">Home</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li class="active"><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">One more separated link</a></li>
+                                </ul>
+                            </li> <!-- /.dropdown -->
+                            <li class="active"><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                        </ul> <!-- /.navbar-nav -->
+
+                        <form class="navbar-form navbar-right" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                        </form>
+
+                    </div> <!-- /.collapse -->
+
+                </div> <!-- /.container-fluid -->
+
+            </nav> <!-- /.bottom-nav -->
+
+            <div class="page-container has-sidebar">
+
+                <div class="col-sm-9">
+
+                    <div class="page-title">
+
+                        <h4>Dashboard <small>sales summary</small></h4>
+
+                    </div> <!-- /.page-title -->
+
+                    <div class="container-fluid main-container">
+
+                        <div class="row">
+
+                            <div class="col-sm-3">
+
+                                <div class="tile tile-warning tile-stat">
+
+                                    <div class="tile-content">
+
+                                        <h2 class="stat-data">43%</h2>
+                                        <h4 class="stat-desc">Unique Visitors</h4>
+
+                                        <span class="stat-icon"><i class="fa fa-globe"></i></span>
+
+                                    </div> <!-- /.tile-content -->
+
+                                    <div class="tile-footer">
+
+                                        <a href="#" class="stat-link">More Info <i class="fa fa-chevron-right"></i></a>
+
+                                    </div> <!-- /.tile-footer -->
+
+                                </div> <!-- /.tile-stat -->
+
+                            </div> <!-- /.col-sm-3 -->
+
+                            <div class="col-sm-3">
+
+                                <div class="tile tile-success tile-stat">
+
+                                    <div class="tile-content">
+
+                                        <h2 class="stat-data">1250</h2>
+                                        <h4 class="stat-desc">New Sales</h4>
+
+                                        <span class="stat-icon"><i class="fa fa-gift"></i></span>
+
+                                    </div> <!-- /.tile-content -->
+
+                                    <div class="tile-footer">
+
+                                        <a href="#" class="stat-link">More Info <i class="fa fa-chevron-right"></i></a>
+
+                                    </div> <!-- /.tile-footer -->
+
+                                </div> <!-- /.tile-stat -->
+
+                            </div> <!-- /.col-sm-3 -->
+
+                            <div class="col-sm-3">
+
+                                <div class="tile tile-primary tile-stat">
+
+                                    <div class="tile-content">
+
+                                        <h2 class="stat-data">$4560</h2>
+                                        <h4 class="stat-desc">Revenew</h4>
+
+                                        <span class="stat-icon"><i class="fa fa-money"></i></span>
+
+                                    </div> <!-- /.tile-content -->
+
+                                    <div class="tile-footer">
+
+                                        <a href="#" class="stat-link">More Info <i class="fa fa-chevron-right"></i></a>
+
+                                    </div> <!-- /.tile-footer -->
+
+                                </div> <!-- /.tile-stat -->
+
+                            </div> <!-- /.col-sm-3 -->
+
+                            <div class="col-sm-3">
+
+                                <div class="tile tile-danger tile-stat">
+
+                                    <div class="tile-content">
+
+                                        <h2 class="stat-data">12</h2>
+                                        <h4 class="stat-desc">Pending Orders</h4>
+
+                                        <span class="stat-icon"><i class="fa fa-truck"></i></span>
+
+                                    </div> <!-- /.tile-content -->
+
+                                    <div class="tile-footer">
+
+                                        <a href="#" class="stat-link">More Info <i class="fa fa-chevron-right"></i></a>
+
+                                    </div> <!-- /.tile-footer -->
+
+                                </div> <!-- /.tile-stat -->
+
+                            </div> <!-- /.col-sm-3 -->
+
+                        </div> <!-- /.row -->
+
+                        <div class="box box-primary">
+
+                            <div class="box-header">
+
+                                <h4 class="box-title"><i class="fa fa-archive"></i> Sales Stats</h4>
+
+                                <ul class="nav nav-pills box-tabs">
+                                    <li class="active"><a href="#tab-1" data-toggle="tab">Graphs</a></li>
+                                    <li><a href="#tab-2" data-toggle="tab">Table</a></li>
+                                </ul> <!-- /.box-tabs -->
+
+                            </div> <!-- /.box-header -->
+
+                            <div class="box-content">
+
+                                <div class="tab-content">
+
+                                    <div class="tab-pane fade in active" id="tab-1">
+
+                                        <div class="row">
+
+                                            <div class="col-sm-8">
+
+                                                <div id="usage-chart-area" style="height: 250px;" data-chart="usageChartArea"></div> <!-- /#usage-chart-area -->
+
+                                            </div> <!-- /.col-sm-8 -->
+
+                                            <div class="col-sm-4">
+
+                                                <h3 class="text-center"><i class="fa fa-signal"></i> More Stats</h3>
+
+                                                <div class="clearfix">
+                                                    <span class="pull-left">Lorem ipsum dolor st amet</span>
+                                                    <small class="pull-right">10%</small>
+                                                </div>
+                                                <div class="progress xs">
+                                                  <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;">
+                                                  </div>
+                                                </div>
+
+                                                <div class="clearfix">
+                                                    <span class="pull-left">Lorem ipsum dolor st amet</span>
+                                                    <small class="pull-right">35%</small>
+                                                </div>
+                                                <div class="progress xs">
+                                                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%;">
+                                                  </div>
+                                                </div>
+
+                                                <div class="clearfix">
+                                                    <span class="pull-left">Lorem ipsum dolor st amet</span>
+                                                    <small class="pull-right">24%</small>
+                                                </div>
+                                                <div class="progress xs">
+                                                  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="24" aria-valuemin="0" aria-valuemax="100" style="width: 24%;">
+                                                  </div>
+                                                </div>
+
+                                                <a class="btn btn-default"><i class="fa fa-cloud-download"></i> Download Report</a>
+
+                                            </div> <!-- /.col-sm-4 -->
+
+                                        </div> <!-- /.row -->
+
+                                    </div> <!-- /.tab-pane -->
+
+                                    <div class="tab-pane fade tab-full-width" id="tab-2">
+
+                                        <div id="sales-table-filters" style="padding: 10px;">
+
+                                            <div class="well">
+
+                                                <div class="row">
+
+                                                    <div class="col-md-3">
+
+                                                        <div class="form-group">
+
+                                                            <label for="sales-table-item-filter"><i class="fa fa-filter"></i> Filter by item name:</label>
+
+                                                            <div class="input-group">
+
+                                                                <select id="sales-table-item-filter" class="form-control" name="item">
+                                                                  <option selected="selected" value="">Not Selected</option>
+                                                                  <option value="iPad">iPad</option>
+                                                                  <option value="Keyboard">Keyboard</option>
+                                                                  <option value="T-Shirt">T-Shirt</option>
+                                                                  <option value="Macbook">Macbook</option>
+                                                                </select>
+
+                                                                <span class="input-group-btn">
+                                                                    <a href="#" id="clear-sales-table-item-filter" class="btn btn-warning"><i class="fa fa-ban"></i></a>
+                                                                </span>
+
+                                                            </div> <!-- /.input-group -->
+
+                                                        </div> <!-- /.form-group -->
+
+                                                    </div> <!-- /.col-md-3 -->
+
+                                                    <div class="col-md-4">
+
+                                                        <div class="form-group">
+
+                                                            <label for="sales-table-date-filter"><i class="fa fa-filter"></i> Filter by date range:</label>
+
+                                                            <div class="input-daterange input-group" id="datepicker">
+
+                                                                <input id="sales-table-date-min-filter" type="text" class="form-control" name="date-min" />
+
+                                                                <span class="input-group-addon">to</span>
+
+                                                                <input id="sales-table-date-filter" type="text" class="form-control" name="date" />
+
+                                                                <span class="input-group-btn">
+                                                                    <a href="#" id="clear-sales-table-date-filter" class="btn btn-warning"><i class="fa fa-ban"></i></a>
+                                                                </span>
+
+                                                            </div> <!-- /.input-group -->
+
+                                                        </div> <!-- /.form-group -->
+
+                                                    </div> <!-- /.col-md-4 -->
+
+                                                    <div class="col-md-5">
+
+                                                        <div class="form-group">
+
+                                                            <label for="sales-table-price-filter"><i class="fa fa-filter"></i> Filter by price range:</label>
+                                                            <input type="text" id="sales-table-price-filter" class="input-sm form-control" name="price" value="" />
+
+                                                        </div> <!-- /.form-group -->
+
+                                                    </div> <!-- /.col-md-5 -->
+
+                                                </div> <!-- /.row -->
+
+                                            </div> <!-- /.well -->
+
+                                        </div> <!-- /#sales-table-filters -->
+
+                                        <table class="table table-striped" id="sales-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Order Number</th>
+                                                    <th>Price</th>
+                                                    <th>Item</th>
+                                                    <th>Date</th>
+                                                    <th>First Name</th>
+                                                    <th>Last Name</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>102465</td>
+                                                    <td>$254</td>
+                                                    <td><a href="#" class="editable-item">iPad</a></td>
+                                                    <td><a href="#" class="editable-date" data-value="04-22-2014">04-22-2014</a></td>
+                                                    <td>Oscar</td>
+                                                    <td>Viquez</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>102466</td>
+                                                    <td>$35</td>
+                                                    <td><a href="#" class="editable-item">Keyboard</a></td>
+                                                    <td><a href="#" class="editable-date" data-value="04-25-2014">04-25-2014</a></td>
+                                                    <td>Erick</td>
+                                                    <td>Robertson</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>102467</td>
+                                                    <td>$49</td>
+                                                    <td><a href="#" class="editable-item">T-Shirt</a></td>
+                                                    <td><a href="#" class="editable-date" data-value="05-12-2014">05-12-2014</a></td>
+                                                    <td>Stan</td>
+                                                    <td>Holmes</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>102468</td>
+                                                    <td>$520</td>
+                                                    <td><a href="#" class="editable-item">Macbook</a></td>
+                                                    <td><a href="#" class="editable-date" data-value="05-09-2014">05-09-2014</a></td>
+                                                    <td>Richard</td>
+                                                    <td>Stevens</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>102469</td>
+                                                    <td>$730</td>
+                                                    <td><a href="#" class="editable-item">LED TV</a></td>
+                                                    <td><a href="#" class="editable-date" data-value="04-22-2014">04-22-2014</a></td>
+                                                    <td>Mike</td>
+                                                    <td>Valle</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>102470</td>
+                                                    <td>$35</td>
+                                                    <td><a href="#" class="editable-item">Keyboard</a></td>
+                                                    <td><a href="#" class="editable-date" data-value="04-22-2014">04-22-2014</a></td>
+                                                    <td>Erick</td>
+                                                    <td>Robertson</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>102471</td>
+                                                    <td>$520</td>
+                                                    <td><a href="#" class="editable-item">Macbook</a></td>
+                                                    <td><a href="#" class="editable-date" data-value="04-22-2014">04-22-2014</a></td>
+                                                    <td>Richard</td>
+                                                    <td>Stevens</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>102472</td>
+                                                    <td>$254</td>
+                                                    <td><a href="#" class="editable-item">iPad</a></td>
+                                                    <td><a href="#" class="editable-date" data-value="04-22-2014">04-22-2014</a></td>
+                                                    <td>Oscar</td>
+                                                    <td>Viquez</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>102465</td>
+                                                    <td>$254</td>
+                                                    <td><a href="#" class="editable-item">iPod Nano</a></td>
+                                                    <td><a href="#" class="editable-date" data-value="04-22-2014">04-22-2014</a></td>
+                                                    <td>Oscar</td>
+                                                    <td>Viquez</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>102465</td>
+                                                    <td>$254</td>
+                                                    <td><a href="#" class="editable-item">iMac</a></td>
+                                                    <td><a href="#" class="editable-date" data-value="04-22-2014">04-22-2014</a></td>
+                                                    <td>Oscar</td>
+                                                    <td>Viquez</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>102465</td>
+                                                    <td>$254</td>
+                                                    <td><a href="#" class="editable-item">iPad</a></td>
+                                                    <td><a href="#" class="editable-date" data-value="04-22-2014">04-22-2014</a></td>
+                                                    <td>Oscar</td>
+                                                    <td>Viquez</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>102465</td>
+                                                    <td>$254</td>
+                                                    <td><a href="#" class="editable-item">LCD TV</a></td>
+                                                    <td><a href="#" class="editable-date" data-value="04-22-2014">04-22-2014</a></td>
+                                                    <td>Oscar</td>
+                                                    <td>Viquez</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>102465</td>
+                                                    <td>$254</td>
+                                                    <td><a href="#" class="editable-item">iPhone 5</a></td>
+                                                    <td><a href="#" class="editable-date" data-value="04-22-2014">04-22-2014</a></td>
+                                                    <td>Oscar</td>
+                                                    <td>Viquez</td>
+                                                </tr>
+                                            </tbody>
+                                        </table> <!-- /#sales-table -->
+
+                                    </div> <!-- /.tab-pane -->
+
+                                </div> <!-- /.tab-content -->
+
+                            </div> <!-- /.box-content -->
+
+                            <div class="box-footer">
+
+                                <div class="row">
+
+                                    <div class="col-xs-4" style="border-right: 1px solid #ecf0f1;">
+
+                                        <h4 class="text-center"><i class="fa fa-signal"></i> In-Store</h4>
+
+                                        <div class="text-center">
+                                            <input id="footer-chart-1" value="35" data-width="100" data-height="100" data-thickness=".4" data-fgColor="#ea5e4f" data-readOnly=true /> <!-- /#footer-chart-1 -->
+                                        </div>
+
+                                    </div> <!-- /.col-sm-4 -->
+
+                                    <div class="col-xs-4" style="border-right: 1px solid #ecf0f1;">
+
+                                        <h4 class="text-center"><i class="fa fa-signal"></i> Mail Order</h4>
+
+                                        <div class="text-center">
+                                            <input id="footer-chart-1" value="53" data-width="100" data-height="100" data-thickness=".4" data-fgColor="#2980b9" data-readOnly=true /> <!-- /#footer-chart-3 -->
+                                        </div>
+
+                                    </div> <!-- /.col-sm-4 -->
+
+                                    <div class="col-xs-4">
+
+                                        <h4 class="text-center"><i class="fa fa-signal"></i> Downloads</h4>
+
+                                        <div class="text-center">
+                                            <input id="footer-chart-1" value="27" data-width="100" data-height="100" data-thickness=".4" data-fgColor="#16a085" data-readOnly=true /> <!-- /#footer-chart-3 -->
+                                        </div>
+
+                                    </div> <!-- /.col-sm-4 -->
+
+                                </div> <!-- /.row -->
+
+                            </div> <!-- /.box-footer -->
+
+                        </div> <!-- /.box -->
+
+                        <div class="row sortable-containment-box">
+
+                            <div class="col-sm-6 sortable highlight-drop">
+
+                                <div class="box box-primary">
+
+                                    <div class="box-header">
+
+                                        <h4 class="box-title"><i class="fa fa-male"></i> Visitors Log</h4>
+
+                                        <div class="box-buttons">
+                                            <button class="btn btn-primary btn-sm refresh-trigger"><i class="fa fa-refresh"></i></button>
+                                            <button class="btn btn-primary btn-sm collapse-toggle"><i class="fa fa-minus"></i></button>
+                                            <button class="btn btn-primary btn-sm remove-trigger"><i class="fa fa-times"></i></button>
+                                        </div> <!-- /.box-buttons -->
+
+                                    </div> <!-- /.box-header -->
+
+                                    <div class="box-content full-width">
+
+                                        <table class="table table-striped table-hover table-collapse" id="visitors-table">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>Country</th>
+                                                    <th>Country Code</th>
+                                                    <th>IP</th>
+                                                    <th>Bounce Rate</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="row-collapsed-trigger"><i class="fa fa-plus-square"></i></td>
+                                                    <td>Costa Rica</td>
+                                                    <td>CR</td>
+                                                    <td>10.25.68.12</td>
+                                                    <td class="text-center"><span class="bar">5,3,9,6,5,9,7,3,5,2</span></td>
+                                                </tr>
+                                                <tr class="row-collapsed row-success">
+                                                    <td colspan="5">
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-globe"></i> Location Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>City:</strong> San Jos&eacute;</li>
+                                                                <li><strong>Region:</strong> Desamparados</li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-laptop"></i> Device Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>Browser:</strong> Firefox 3.O</li>
+                                                                <li><strong>OS:</strong> Win 8</li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </td>
+                                                </tr> <!-- /.row-collapsed -->
+                                                <tr>
+                                                    <td class="row-collapsed-trigger"><i class="fa fa-plus-square"></i></td>
+                                                    <td>United States</td>
+                                                    <td>USA</td>
+                                                    <td>12.142.32.45</td>
+                                                    <td class="text-center"><span class="bar">5,3,2,-1,-3,-2,2,3,5,2</span></td>
+                                                </tr>
+                                                <tr class="row-collapsed row-warning">
+                                                    <td colspan="5">
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-globe"></i> Location Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>City:</strong> San Jos&eacute;</li>
+                                                                <li><strong>Region:</strong> Desamparados</li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-laptop"></i> Device Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>Browser:</strong> Firefox 3.O</li>
+                                                                <li><strong>OS:</strong> Win 8</li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </td>
+                                                </tr> <!-- /.row-collapsed -->
+                                                <tr>
+                                                    <td class="row-collapsed-trigger"><i class="fa fa-plus-square"></i></td>
+                                                    <td>Sweden</td>
+                                                    <td>SE</td>
+                                                    <td>15.234.435.24</td>
+                                                    <td class="text-center"><span class="bar">5,3,9,6,5,9,7,3,5,2</span></td>
+                                                </tr>
+                                                <tr class="row-collapsed row-danger">
+                                                    <td colspan="5">
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-globe"></i> Location Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>City:</strong> San Jos&eacute;</li>
+                                                                <li><strong>Region:</strong> Desamparados</li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-laptop"></i> Device Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>Browser:</strong> Firefox 3.O</li>
+                                                                <li><strong>OS:</strong> Win 8</li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </td>
+                                                </tr> <!-- /.row-collapsed -->
+                                                <tr>
+                                                    <td class="row-collapsed-trigger"><i class="fa fa-plus-square"></i></td>
+                                                    <td>Germany</td>
+                                                    <td>DE</td>
+                                                    <td>8.23.34.556</td>
+                                                    <td class="text-center"><span class="bar">5,3,2,-1,-3,-2,2,3,5,2</span></td>
+                                                </tr>
+                                                <tr class="row-collapsed row-info">
+                                                    <td colspan="5">
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-globe"></i> Location Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>City:</strong> San Jos&eacute;</li>
+                                                                <li><strong>Region:</strong> Desamparados</li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-laptop"></i> Device Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>Browser:</strong> Firefox 3.O</li>
+                                                                <li><strong>OS:</strong> Win 8</li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </td>
+                                                </tr> <!-- /.row-collapsed -->
+                                                <tr>
+                                                    <td class="row-collapsed-trigger"><i class="fa fa-plus-square"></i></td>
+                                                    <td>Norway</td>
+                                                    <td>NO</td>
+                                                    <td>23.261.342.12</td>
+                                                    <td class="text-center"><span class="bar">5,3,9,6,5,9,7,3,5,2</span></td>
+                                                </tr>
+                                                <tr class="row-collapsed row-primary">
+                                                    <td colspan="5">
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-globe"></i> Location Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>City:</strong> San Jos&eacute;</li>
+                                                                <li><strong>Region:</strong> Desamparados</li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-laptop"></i> Device Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>Browser:</strong> Firefox 3.O</li>
+                                                                <li><strong>OS:</strong> Win 8</li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </td>
+                                                </tr> <!-- /.row-collapsed -->
+                                                <tr>
+                                                    <td class="row-collapsed-trigger"><i class="fa fa-plus-square"></i></td>
+                                                    <td>Costa Rica</td>
+                                                    <td>CR</td>
+                                                    <td>10.25.68.12</td>
+                                                    <td class="text-center"><span class="bar">5,3,2,-1,-3,-2,2,3,5,2</span></td>
+                                                </tr>
+                                                <tr class="row-collapsed">
+                                                    <td colspan="5">
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-globe"></i> Location Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>City:</strong> San Jos&eacute;</li>
+                                                                <li><strong>Region:</strong> Desamparados</li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-laptop"></i> Device Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>Browser:</strong> Firefox 3.O</li>
+                                                                <li><strong>OS:</strong> Win 8</li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </td>
+                                                </tr> <!-- /.row-collapsed -->
+                                                <tr>
+                                                    <td class="row-collapsed-trigger"><i class="fa fa-plus-square"></i></td>
+                                                    <td>United States</td>
+                                                    <td>USA</td>
+                                                    <td>12.142.32.45</td>
+                                                    <td class="text-center"><span class="bar">5,3,9,6,5,9,7,3,5,2</span></td>
+                                                </tr>
+                                                <tr class="row-collapsed">
+                                                    <td colspan="5">
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-globe"></i> Location Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>City:</strong> San Jos&eacute;</li>
+                                                                <li><strong>Region:</strong> Desamparados</li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-laptop"></i> Device Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>Browser:</strong> Firefox 3.O</li>
+                                                                <li><strong>OS:</strong> Win 8</li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </td>
+                                                </tr> <!-- /.row-collapsed -->
+                                                <tr>
+                                                    <td class="row-collapsed-trigger"><i class="fa fa-plus-square"></i></td>
+                                                    <td>Sweden</td>
+                                                    <td>SE</td>
+                                                    <td>15.234.435.24</td>
+                                                    <td class="text-center"><span class="bar">5,3,2,-1,-3,-2,2,3,5,2</span></td>
+                                                </tr>
+                                                <tr class="row-collapsed">
+                                                    <td colspan="5">
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-globe"></i> Location Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>City:</strong> San Jos&eacute;</li>
+                                                                <li><strong>Region:</strong> Desamparados</li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-laptop"></i> Device Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>Browser:</strong> Firefox 3.O</li>
+                                                                <li><strong>OS:</strong> Win 8</li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </td>
+                                                </tr> <!-- /.row-collapsed -->
+                                                <tr>
+                                                    <td class="row-collapsed-trigger"><i class="fa fa-plus-square"></i></td>
+                                                    <td>Germany</td>
+                                                    <td>DE</td>
+                                                    <td>8.23.34.556</td>
+                                                    <td class="text-center"><span class="bar">5,3,9,6,5,9,7,3,5,2</span></td>
+                                                </tr>
+                                                <tr class="row-collapsed">
+                                                    <td colspan="5">
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-globe"></i> Location Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>City:</strong> San Jos&eacute;</li>
+                                                                <li><strong>Region:</strong> Desamparados</li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-laptop"></i> Device Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>Browser:</strong> Firefox 3.O</li>
+                                                                <li><strong>OS:</strong> Win 8</li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </td>
+                                                </tr> <!-- /.row-collapsed -->
+                                                <tr>
+                                                    <td class="row-collapsed-trigger"><i class="fa fa-plus-square"></i></td>
+                                                    <td>Norway</td>
+                                                    <td>NO</td>
+                                                    <td>23.261.342.12</td>
+                                                    <td class="text-center"><span class="bar">5,3,2,-1,-3,-2,2,3,5,2</span></td>
+                                                </tr>
+                                                <tr class="row-collapsed">
+                                                    <td colspan="5">
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-globe"></i> Location Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>City:</strong> San Jos&eacute;</li>
+                                                                <li><strong>Region:</strong> Desamparados</li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-laptop"></i> Device Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>Browser:</strong> Firefox 3.O</li>
+                                                                <li><strong>OS:</strong> Win 8</li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </td>
+                                                </tr> <!-- /.row-collapsed -->
+                                                <tr>
+                                                    <td class="row-collapsed-trigger"><i class="fa fa-plus-square"></i></td>
+                                                    <td>Costa Rica</td>
+                                                    <td>CR</td>
+                                                    <td>10.25.68.12</td>
+                                                    <td class="text-center"><span class="bar">5,3,9,6,5,9,7,3,5,2</span></td>
+                                                </tr>
+                                                <tr class="row-collapsed">
+                                                    <td colspan="5">
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-globe"></i> Location Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>City:</strong> San Jos&eacute;</li>
+                                                                <li><strong>Region:</strong> Desamparados</li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-laptop"></i> Device Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>Browser:</strong> Firefox 3.O</li>
+                                                                <li><strong>OS:</strong> Win 8</li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </td>
+                                                </tr> <!-- /.row-collapsed -->
+                                                <tr>
+                                                    <td class="row-collapsed-trigger"><i class="fa fa-plus-square"></i></td>
+                                                    <td>United States</td>
+                                                    <td>USA</td>
+                                                    <td>12.142.32.45</td>
+                                                    <td class="text-center"><span class="bar">5,3,2,-1,-3,-2,2,3,5,2</span></td>
+                                                </tr>
+                                                <tr class="row-collapsed">
+                                                    <td colspan="5">
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-globe"></i> Location Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>City:</strong> San Jos&eacute;</li>
+                                                                <li><strong>Region:</strong> Desamparados</li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-laptop"></i> Device Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>Browser:</strong> Firefox 3.O</li>
+                                                                <li><strong>OS:</strong> Win 8</li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </td>
+                                                </tr> <!-- /.row-collapsed -->
+                                                <tr>
+                                                    <td class="row-collapsed-trigger"><i class="fa fa-plus-square"></i></td>
+                                                    <td>Sweden</td>
+                                                    <td>SE</td>
+                                                    <td>15.234.435.24</td>
+                                                    <td class="text-center"><span class="bar">5,3,9,6,5,9,7,3,5,2</span></td>
+                                                </tr>
+                                                <tr class="row-collapsed">
+                                                    <td colspan="5">
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-globe"></i> Location Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>City:</strong> San Jos&eacute;</li>
+                                                                <li><strong>Region:</strong> Desamparados</li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-laptop"></i> Device Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>Browser:</strong> Firefox 3.O</li>
+                                                                <li><strong>OS:</strong> Win 8</li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </td>
+                                                </tr> <!-- /.row-collapsed -->
+                                                <tr>
+                                                    <td class="row-collapsed-trigger"><i class="fa fa-plus-square"></i></td>
+                                                    <td>Germany</td>
+                                                    <td>DE</td>
+                                                    <td>8.23.34.556</td>
+                                                    <td class="text-center"><span class="bar">5,3,2,-1,-3,-2,2,3,5,2</span></td>
+                                                </tr>
+                                                <tr class="row-collapsed">
+                                                    <td colspan="5">
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-globe"></i> Location Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>City:</strong> San Jos&eacute;</li>
+                                                                <li><strong>Region:</strong> Desamparados</li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-laptop"></i> Device Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>Browser:</strong> Firefox 3.O</li>
+                                                                <li><strong>OS:</strong> Win 8</li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </td>
+                                                </tr> <!-- /.row-collapsed -->
+                                                <tr>
+                                                    <td class="row-collapsed-trigger"><i class="fa fa-plus-square"></i></td>
+                                                    <td>Norway</td>
+                                                    <td>NO</td>
+                                                    <td>23.261.342.12</td>
+                                                    <td class="text-center"><span class="bar">5,3,9,6,5,9,7,3,5,2</span></td>
+                                                </tr>
+                                                <tr class="row-collapsed">
+                                                    <td colspan="5">
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-globe"></i> Location Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>City:</strong> San Jos&eacute;</li>
+                                                                <li><strong>Region:</strong> Desamparados</li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <h5><i class="fa fa-laptop"></i> Device Information</h5>
+                                                            <hr>
+                                                            <ul>
+                                                                <li><strong>Browser:</strong> Firefox 3.O</li>
+                                                                <li><strong>OS:</strong> Win 8</li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </td>
+                                                </tr> <!-- /.row-collapsed -->
+                                            </tbody>
+                                        </table> <!-- /#visitors-table -->
+
+                                    </div> <!-- /.box-content -->
+
+                                </div> <!-- /.box -->
+
+                            </div> <!-- /.col-sm-6 .sortable -->
+
+                            <div class="col-sm-6 sortable highlight-drop">
+
+                                <div class="box box-primary">
+
+                                    <div class="box-header">
+
+                                        <h4 class="box-title"><i class="fa fa-map-marker"></i> International Sales</h4>
+
+                                        <div class="box-buttons">
+                                            <button class="btn btn-primary btn-sm refresh-trigger"><i class="fa fa-refresh"></i></button>
+                                            <button class="btn btn-primary btn-sm collapse-toggle"><i class="fa fa-minus"></i></button>
+                                            <button class="btn btn-primary btn-sm remove-trigger"><i class="fa fa-times"></i></button>
+                                        </div> <!-- /.box-buttons -->
+
+                                    </div> <!-- /.box-header -->
+
+                                    <div class="box-content full-width">
+
+                                        <div id="world-map" class="no-footer" style="height: 200px"></div> <!-- /#world-map -->
+
+                                    </div> <!-- /.box-content -->
+
+                                    <div class="box-footer clearfix">
+
+                                        <div class="btn-group pull-right">
+                                            <button class="btn btn-default"><i class="fa fa-download"></i> Download</button>
+                                        </div>
+
+                                    </div> <!-- /.box-footer -->
+
+                                </div> <!-- /.box -->
+
+                                <div class="box box-primary">
+
+                                    <div class="box-header">
+
+                                        <h4 class="box-title"><i class="fa fa-check-square-o"></i> Todo App</h4>
+
+                                        <div class="box-buttons">
+                                            <button class="btn btn-primary btn-sm refresh-trigger"><i class="fa fa-refresh"></i></button>
+                                            <button class="btn btn-primary btn-sm collapse-toggle"><i class="fa fa-minus"></i></button>
+                                            <button class="btn btn-primary btn-sm remove-trigger"><i class="fa fa-times"></i></button>
+                                        </div> <!-- /.box-buttons -->
+
+                                    </div> <!-- /.box-header -->
+
+                                    <div class="box-content">
+
+                                        <form class="todo-app" action="">
+
+                                            <div class="alert alert-danger fade in">
+                                                <button type="button" class="close">×</button>
+                                                <h4>Error!</h4>
+                                                <p>Please enter a task name.</p>
+                                            </div> <!-- /.alert -->
+
+                                            <input class="todo-input form-control input-lg" type="text" placeholder="What do you need to do?" />
+
+                                            <button type="submit" class="add-task btn btn-success btn-block">
+                                                Enter Task
+                                            </button>
+
+                                            <div class="sort">
+
+                                                <ul class="list-inline">
+                                                    <li><a class="active" data-sort="all" href="#">All</a>
+                                                    </li>
+                                                    <li><a data-sort="pending" href="#">Pending</a>
+                                                    </li>
+                                                    <li><a data-sort="done" href="#">Completed</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div> <!-- /.sort -->
+
+                                            <ul class="list-group tasks-list">
+
+                                            </ul> <!-- /.tasks-list -->
+
+                                            <div class="info">
+
+                                                <div class="pending-tasks pull-left">
+
+                                                    <span class="pending-number">0</span>
+                                                    <span class="pending-text">Pending tasks</span>
+
+                                                </div> <!-- /.pending-tasks -->
+
+                                                <a href="#" class="delete-all-complete btn btn-danger pull-right">Delete completed tasks</a>
+
+                                            </div> <!-- /.info -->
+
+                                        </form> <!-- /.todo-app -->
+
+                                    </div> <!-- /.box-content -->
+
+                                </div> <!-- /.box -->
+
+                            </div> <!-- /.col-sm-6 .sortable -->
+
+                        </div> <!-- /.row .sortable-containment-tile -->
+
+                    </div> <!-- /.main-container -->
+
+                </div> <!-- /.col-sm-9 -->
+
+                <div class="col-sm-3">
+
+                    <div class="sidebar sidebar-fixed">
+
+                        <div class="widget widget-info">
+
+                            <div class="widget-header">
+
+                                <h5 class="widget-title"><i class="fa fa-database"></i> Server Load</h5>
+
+                                <div class="widget-buttons">
+                                    <button class="btn btn-info btn-xs collapse-toggle"><i class="fa fa-minus"></i></button>
+                                    <button class="btn btn-info btn-xs remove-trigger"><i class="fa fa-times"></i></button>
+                                </div> <!-- /.widget-buttons -->
+
+                            </div> <!-- /.widget-header -->
+
+                            <div class="widget-content">
+
+                                <div id="server-chart-bar" style="height: 200px;" data-chart="serverChartArea"></div> <!-- /#server-chart-bar -->
+
+                            </div> <!-- /.widget-content -->
+
+                        </div> <!-- /.widget -->
+
+                        <div class="widget widget-info">
+
+                            <div class="widget-header">
+
+                                <h5 class="widget-title"><i class="fa fa-university"></i> Per Store Summary</h5>
+
+                                <div class="widget-buttons">
+                                    <button class="btn btn-info btn-xs collapse-toggle"><i class="fa fa-minus"></i></button>
+                                    <button class="btn btn-info btn-xs remove-trigger"><i class="fa fa-times"></i></button>
+                                </div> <!-- /.widget-buttons -->
+
+                            </div> <!-- /.widget-header -->
+
+                            <div class="widget-content">
+
+                                <div class="panel-group" id="widget-panel">
+
+                                    <div class="panel panel-default">
+
+                                        <div class="panel-heading">
+                                            <h5 class="panel-title"><a data-toggle="collapse" data-parent="#widget-panel" href="#collapse-1"><i class="fa fa-dot-circle-o"></i> Tech Outlet</a></h5>
+                                        </div>
+
+                                        <div id="collapse-1" class="panel-collapse collapse">
+                                            <div class="panel-body">
+
+                                                <div id="collapse-one-area" style="height: 250px; width:100%;" data-chart="collapseOneArea"></div> <!-- /#collapse-one-area -->
+
+                                            </div>
+                                        </div>
+
+                                    </div> <!-- /.panel -->
+
+                                    <div class="panel panel-default">
+
+                                        <div class="panel-heading">
+                                            <h5 class="panel-title"><a data-toggle="collapse" data-parent="#widget-panel" href="#collapse-2"><i class="fa fa-dot-circle-o"></i> Computer Pros</a></h5>
+                                        </div>
+
+                                        <div id="collapse-2" class="panel-collapse collapse">
+                                            <div class="panel-body">
+
+                                                <div id="collapse-two-area" style="height: 250px; width:100%;" data-chart="collapseTwoArea"></div> <!-- /#collapse-two-area -->
+
+                                            </div>
+                                        </div>
+
+                                    </div> <!-- /.panel -->
+
+                                    <div class="panel panel-default">
+
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#widget-panel" href="#collapse-3"><i class="fa fa-dot-circle-o"></i> Nerd Mall</a></h4>
+                                        </div>
+
+                                        <div id="collapse-3" class="panel-collapse collapse">
+                                            <div class="panel-body">
+
+                                                <div id="collapse-three-area" style="height: 250px; width:100%;" data-chart="collapseThreeArea"></div> <!-- /#collapse-two-area -->
+
+                                            </div>
+                                        </div>
+
+                                    </div> <!-- /.panel -->
+
+                                </div> <!-- /.panel-group -->
+
+                            </div> <!-- /.widget-content -->
+
+                        </div> <!-- /.widget -->
+
+                        <div class="widget widget-warning">
+
+                            <div class="widget-header">
+
+                                <h5 class="widget-title"><i class="fa fa-info-circle"></i> How to?</h5>
+
+                                <div class="widget-buttons">
+                                    <button class="btn btn-warning btn-xs collapse-toggle"><i class="fa fa-minus"></i></button>
+                                    <button class="btn btn-warning btn-xs remove-trigger"><i class="fa fa-times"></i></button>
+                                </div> <!-- /.widget-buttons -->
+
+                            </div> <!-- /.widget-header -->
+
+                            <div class="widget-content">
+
+                                <p>Check out the modular javascript file used to build this demo dashboard and take a look at the HTML structure with your browser's developer tools.</p>
+
+                            </div> <!-- /.widget-content -->
+
+                            <div class="widget-footer clearfix">
+
+                                <div class="btn-group pull-right">
+                                    <a href="https://gist.github.com/anonymous/cfafa1b24251b4b80bbc" target="_blank" class="btn btn-xs btn-warning"><i class="fa fa-eye"></i> View JS</a>
+                                </div>
+
+                            </div>
+
+                        </div> <!-- /.widget -->
+
+                    </div> <!-- /.sidebar -->
+
+                </div> <!-- /.col-sm-3 -->
+
+            </div> <!-- /.page-container -->
+
+        </div> <!-- /.wrapper -->
+
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
+        <script src="bower_components/raphael/raphael-min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bower_components/bootstrap-jasny/dist/js/jasny-bootstrap.min.js"></script>
+        <script src="bower_components/momentjs/min/moment.min.js"></script>
+        <script src="bower_components/moment-range/lib/moment-range.js"></script>
+        <script src="bower_components/slimScroll/jquery.slimscroll.min.js"></script>
+        <script src="bower_components/pace/pace.min.js"></script>
+        <script src="bower_components/spin.js/spin.js"></script>
+        <script src="bower_components/spin.js/jquery.spin.js"></script>
+        <script src="bower_components/messenger/build/js/messenger.min.js"></script>
+        <script src="bower_components/messenger/build/js/messenger-theme-flat.js"></script>
+        <script src="bower_components/bower-jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+        <script src="bower_components/bower-jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+        <script src="bower_components/dynatable/jquery.dynatable.js"></script>
+        <script src="bower_components/morris.js/morris.min.js"></script>
+        <script src="bower_components/jquery-knob/js/jquery.knob.js"></script>
+        <script src="bower_components/peity/jquery.peity.min.js"></script>
+        <script src="bower_components/x-editable/dist/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+        <script src="bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+        <script src="bower_components/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
+        <script src="bower_components/jquery-minicolors/jquery.minicolors.min.js"></script>
+        <script src="bower_components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+        <script src="bower_components/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+        <script src="bower_components/icheck/icheck.min.js"></script>
+        <script src="bower_components/bootstrap-select/bootstrap-select.min.js"></script>
+        <script src="bower_components/bootstrapValidator/dist/js/bootstrapValidator.min.js"></script>
+        <script src="bower_components/ladda-bootstrap/dist/ladda.min.js"></script>
+        <script src="bower_components/bootstrap3-wysihtml5-bower/dist/bootstrap3-wysihtml5.all.min.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js scripts/rocket-dashboard.js -->
+        <script src="scripts/rocket-dashboard.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/rocket-todo.js -->
+        <script src="scripts/rocket-todo.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/pages/dashboard.js -->
+        <script src="scripts/pages/dashboard.js"></script>
+        <!-- endbuild -->
+
+    </body>
+</html>

@@ -1,0 +1,145 @@
+//
+// Off Canvas Nav
+// --------------------------------------------------
+
+.navmenu {
+	z-index: 1;
+	border: 0;
+	background-color: @asphalt;
+
+	.user-box {
+		overflow: hidden;
+		padding: 8px 0 5px;
+		text-align: center;
+		background-color: darken(@midnight, 10%);
+
+		img {
+			border: 1px solid lighten(@midnight, 10%);;
+		}
+
+		h5 {
+			color: @clouds;
+		}
+	}
+
+	.navmenu-nav {
+		border-bottom: 1px solid lighten(@asphalt, 6%);
+
+		li {
+			position: relative;
+
+			a {
+				color: @clouds;
+
+				&:hover {
+					color: @silver;
+				}
+			}
+
+			.badge {
+				position: absolute;
+				top: 16px;
+				right: 10px;
+				font-size: 10px;
+			}
+		}
+
+		.active {
+
+			a {
+				background-color: @midnight;
+
+				&:hover, &:focus {
+					background-color: @midnight;
+				}
+			}
+		}
+
+		.open {
+
+			a {
+				background-color: lighten(@midnight, 9%);
+
+				&:hover, &:focus {
+					background-color: lighten(@midnight, 9%);
+				}
+			}
+
+			> a {
+				border-bottom: 1px solid darken(@asphalt, 2%);
+
+				i {
+					border-right: 1px solid darken(@asphalt, 3%);
+				}
+
+				span {
+					border-left: 1px solid lighten(@asphalt, 9%);
+				}
+			}
+
+			.dropdown-menu {
+				background-color: lighten(@midnight, 9%);
+				border-top: 1px solid lighten(@asphalt, 10%);
+
+				a {
+					padding: 5px 17px;
+				}
+
+				.active {
+
+					a {
+						background-color: @midnight;
+					}
+				}
+
+				.dropdown-header {
+					color: @silver;
+				}
+
+				.divider {
+					background-color: lighten(@midnight, 6%);
+				}
+			}
+		}
+	}
+
+	.top-level {
+
+		> li {
+			border-bottom: 1px solid darken(@asphalt, 6%);
+			border-top: 1px solid lighten(@asphalt, 6%);
+
+			> a {
+				padding: 0;
+
+				i {
+					display: inline-block;
+					height: 48px;
+					width: 50px;
+					line-height: 50px;
+					text-align: center;
+					border-right: 1px solid darken(@asphalt, 6%);
+				}
+
+				span {
+					display: inline-block;
+					height: 48px;
+					padding: 0 5px 0 10px;
+					line-height: 50px;
+					border-left: 1px solid lighten(@asphalt, 6%);
+				}
+			}
+		}
+
+		> .active {
+
+			i {
+				border-right: 1px solid darken(@asphalt, 10%);
+			}
+
+			span {
+				border-left: 1px solid lighten(@asphalt, 3%);
+			}
+		}
+	}
+}

@@ -1,0 +1,340 @@
+//
+// Top Nav
+// --------------------------------------------------
+
+.top-nav {
+	margin: 0;
+	border: 0;
+	border-radius: 0;
+	background-color: @asphalt;
+
+	.off-canvas-toggle {
+		color: @clouds;
+
+		&:hover {
+			color: @silver;
+		}
+	}
+
+	.navbar-nav {
+
+		> li {
+
+			> a {
+				color: @clouds;
+				position: relative;
+
+				.badge	{
+					position: absolute;
+					top: 8px;
+					left: 0px;
+					font-size: 10px;
+				}
+
+				&:hover, &:focus {
+					color: @silver;
+				}
+			}
+		}
+
+		.open {
+
+			> a {
+				background-color: transparent;
+				color: @silver;
+
+				&:hover, &:focus {
+					background-color: transparent;
+					color: @silver;
+				}
+			}
+		}
+
+		.dropdown-menu {
+			padding: 0;
+			top: 85%;
+			border-radius: 4px;
+			background: transparent;
+
+			.dropdown-header {
+				position: relative;
+				background-color: darken(@midnight, 10%);
+				color: @white;
+				padding: 4px 0;
+				text-align: center;
+				border-radius: 4px 4px 0 0;
+
+				&:after {
+					top: -14px;
+					left: 92%;
+					border: solid transparent;
+					content: " ";
+					height: 0;
+					width: 0;
+					position: absolute;
+					pointer-events: none;
+					border-color: rgba(255, 255, 255, 0);
+					border-bottom-color: darken(@midnight, 10%);
+					border-width: 7px;
+					margin-left: -7px;
+				}
+			}
+
+			.divider {
+				margin: 0px;
+			}
+
+			.dropdown-holder {
+				height: 275px;
+				overflow: scroll;
+				padding: 0 4px;
+				background-color: darken(@midnight, 10%);
+
+				.nav {
+					background: @white;
+
+					li {
+						border-bottom: 1px dashed lighten(@silver, 5%);
+					}
+				}
+			}
+
+			.dropdown-footer {
+				text-align: center;
+				background-color: darken(@midnight, 10%);
+				border-radius: 0 0 4px 4px;
+
+				a {
+					display: block;
+					color: @white;
+					padding: 8px 0;
+					border-radius: 0 0 4px 4px;
+
+					&:hover {
+						color: @silver;
+						background-color: transparent;
+					}
+				}
+			}
+
+		}
+
+		.dropdown-messages {
+			width: 280px;
+
+			.message {
+				
+				a {
+					padding-top: 10px;
+					padding-bottom: 10px;
+					position: relative;
+					color: @midnight;
+
+					.message-time {
+						position: absolute;
+						top: 8px;
+						right: 8px;
+						font-size: 12px;
+						color: @silver;
+					}
+
+					.message-title {
+						font-weight: bold;
+						display: block;
+					}
+
+					.message-excerpt {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+
+		.dropdown-notifications {
+			width: 300px;
+
+			.notification {
+				
+				a {
+					padding-top: 10px;
+					padding-bottom: 10px;
+					color: @midnight;
+
+					i {
+						margin-top: 4px;
+						float: right;
+						color: @silver;
+					}
+
+					.notification-excerpt {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+
+		.dropdown-tasks {
+			width: 300px;
+
+			.task {
+				
+				a {
+					padding-top: 10px;
+					padding-bottom: 10px;
+					color: @midnight;
+
+					.task-title {
+						display: block;
+						font-size: 12px;
+						margin-bottom: 4px;
+
+						small {
+							float: right;
+							color: @silver;
+						}
+					}
+
+					.progress {
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+
+	&.top-nav-fixed {
+		z-index: 15;
+		width: 100%;
+	}
+}
+
+@media (max-width: @screen-xs-max) {
+
+	.top-nav {
+
+		.navbar-right {
+			text-align: center;
+			border-top: 1px solid darken(@asphalt, 3%);
+
+			li {
+				display: inline;
+				
+				a {
+					display: inline;
+
+					.badge {
+						top: 3px;
+						left: -2px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/* Fix dropdown menu for small screens to display correctly on small screens */
+@media screen and (max-width: @screen-sm) {
+    .top-nav {
+    	.navbar-nav {
+    		padding: 5px 0 0;
+
+	        > .dropdown {
+	            > .dropdown-menu {
+	                position: absolute;
+	                top: 100%;
+	                right: 0;
+	                left: auto;
+	                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+
+	                .dropdown-header {
+	                	display: block;
+	                }
+
+	                .dropdown-footer {
+
+	                	a {
+	                		background-color: darken(@midnight, 10%);
+	                		padding-top: 10px;
+	                		color: @white !important;
+
+	                		&:hover, &:focus {
+								background-color: darken(@midnight, 10%) !important;
+								color: @silver !important;
+	                		}
+	                	}
+	                }
+	            }
+
+	            .dropdown-messages {
+	                position: absolute;
+					top: 26px;
+					left: 50%;
+					margin-left: -95px;
+
+	                .dropdown-header {
+
+	                	&:after {
+	                		left: 33%;
+	                	}
+	                }
+
+	                .message {
+	                	display: block;
+
+	                	> a {
+	                		display: block;
+	                		text-align: left;
+	                	}
+	                }
+	            }
+
+	            .dropdown-notifications {
+	                position: absolute;
+					top: 26px;
+					left: 50%;
+					margin-left: -150px;
+
+	                .dropdown-header {
+
+	                	&:after {
+	                		left: 49%;
+	                	}
+	                }
+
+	                .notification {
+	                	display: block;
+
+	                	> a {
+	                		display: block;
+	                		text-align: left;
+	                	}
+	                }
+	            }
+
+	            .dropdown-tasks {
+	                position: absolute;
+					top: 26px;
+					left: 50%;
+					margin-left: -196px;
+
+	                .dropdown-header {
+
+	                	&:after {
+	                		left: 64%;
+	                	}
+	                }
+
+	                .task {
+	                	display: block;
+
+	                	> a {
+	                		display: block;
+	                		text-align: left;
+	                	}
+	                }
+	            }
+	        }        
+	    }
+    }
+}

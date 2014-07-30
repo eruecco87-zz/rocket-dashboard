@@ -1,0 +1,206 @@
+//
+// Tables
+// --------------------------------------------------
+
+table {
+
+	thead {
+
+		th {
+			background-color: @clouds;
+		}
+	}
+
+	&.table-collapse {
+
+		tbody {
+
+			tr {
+
+				.row-collapsed-trigger{
+					cursor: pointer;
+				}
+
+				&.row-collapsed {
+					display: none;
+
+					td {
+						position: relative;
+						background-color: lighten(@midnight, 70%);
+						border-top: 3px solid @concrete;
+
+						&:after {
+							top: -16px;
+							left: 14px;
+							border: solid transparent;
+							content: " ";
+							height: 0;
+							width: 0;
+							position: absolute;
+							pointer-events: none;
+							border-color: rgba(255, 255, 255, 0);
+							border-bottom-color: @concrete;
+							border-width: 7px;
+							margin-left: -7px;
+						}
+
+						hr {
+							border-color: darken(@clouds, 5%);
+						}
+					}
+
+					&.row-success {
+						
+						td {
+							border-top: 3px solid @nephritis;
+
+							&:after {
+								border-bottom-color: @nephritis;
+							}
+						}
+					}
+
+					&.row-danger {
+						
+						td {
+							border-top: 3px solid @alizarin;
+
+							&:after {
+								border-bottom-color: @alizarin;
+							}
+						}
+					}
+
+					&.row-warning {
+						
+						td {
+							border-top: 3px solid @orange;
+
+							&:after {
+								border-bottom-color: @orange;
+							}
+						}
+					}
+
+					&.row-info {
+						
+						td {
+							border-top: 3px solid @river;
+
+							&:after {
+								border-bottom-color: @river;
+							}
+						}
+					}
+
+					&.row-primary {
+						
+						td {
+							border-top: 3px solid @midnight;
+
+							&:after {
+								border-bottom-color: @midnight;
+							}
+						}
+					}
+
+					&:hover {
+
+						td {
+							background-color: lighten(@midnight, 70%);
+						}
+					}
+				}
+			}
+		}
+
+		&.table-striped {
+
+			tbody {
+
+				> tr:nth-child(4n-1):not(.row-collapsed) {
+
+					td {
+						background-color: transparent;
+					}
+				}
+			}
+		}
+	}
+
+	// dynatable styles.
+	.dynatable-head, .dynatable-sort-header {
+		color: @midnight;
+
+		&:hover, &:focus {
+			color: @concrete;
+		}
+	}
+}
+
+// dynatable styles.
+.dynatable-search {
+		
+	input {
+		height: 34px;
+		padding: 6px 12px;
+		font-size: 14px;
+		line-height: 1.42857143;
+		color: #555555;
+		background-color: #ffffff;
+		background-image: none;
+		border: 1px solid #cccccc;
+		border-radius: 4px;
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+		transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	}
+}
+
+// dynatable styles.
+.dynatable-per-page {
+	display: inline-block;
+	margin: 8px 0 0 15px;
+
+	select {
+		height: 34px;
+		padding: 6px 12px;
+		font-size: 14px;
+		line-height: 1.42857143;
+		color: #555555;
+		background-color: #ffffff;
+		background-image: none;
+		border: 1px solid #cccccc;
+		border-radius: 4px;
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+		transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	}
+}
+
+// dynatable styles.
+.dynatable-search {
+	margin: 8px 15px 10px 0;
+}
+
+// dynatable styles.
+.dynatable-record-count {
+	margin: -4px 0 0 15px;
+	padding-bottom: 14px;
+}
+
+// dynatable styles.
+.dynatable-pagination-links {
+	margin: -5px 15px 0;
+}
+
+// dynatable styles.
+.dynatable-active-page {
+	
+	a {
+		.btn;
+		.btn-default;
+
+		&:hover {
+			color: @midnight;
+		}
+	}
+}

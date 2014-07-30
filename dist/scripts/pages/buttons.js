@@ -1,0 +1,1 @@
+$(function(){"use strict";!function(a){var b=[];rocketDashboard.Pages.Buttons={init:function(){a(".ladda-button").each(function(c,d){b[c]=Ladda.create(d),a(d).on("click",function(a){a.preventDefault(),b[c].start(),setTimeout(function(){b[c].stop()},2e3)})})}()}}(jQuery,window)});

@@ -1,0 +1,1 @@
+$(function(){"use strict";!function(a){rocketDashboard.Pages.Tables={init:function(){a("#dynatable").dynatable({dataset:{perPageDefault:10,perPageOptions:[5,10,25,50]}})}()}}(jQuery,window)});

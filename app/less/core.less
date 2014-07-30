@@ -1,0 +1,248 @@
+//
+// Core
+// --------------------------------------------------
+
+html, body {
+  height: 100%;
+  color: @midnight;
+
+  // bootstrap well style
+  .well {
+  	background: darken(@clouds, 2%);
+  	box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+	// pace styles
+	.pace {
+
+		.pace-progress, .pace-activity {
+			background-color: @pace-loader-color;
+		}
+	}
+
+	// jvectormap styles
+	.jvectormap-label {
+		z-index: 5;
+	}
+
+	// jvectormap styles
+	.jvectormap-zoomin, .jvectormap-zoomout {
+		height: 18px;
+		width: 18px;
+	}
+
+	// morris.js tooltip styles
+	.morris-hover {
+		position: absolute;
+		z-index: 10;
+	}
+
+	// WYISHTML5 editor styles.
+	.wysihtml5-sandbox {
+		border: 1px solid silver !important;
+		padding: 5px !important;
+	}
+
+	// small progress bar
+	.progress.xs {
+		height: 6px;
+	}
+
+  // main layout styles
+	.wrapper {
+		overflow: hidden;
+		position: relative;
+		left: 0;
+		z-index: 2;
+		background-color: @sidebar-bg;
+		min-height: 100%;
+
+		.page-container {
+			.clearfix;
+			min-height: 100%;
+			border-top: 1px solid lighten(@clouds, 1%);
+
+			> [class^=col-] {
+				min-height: 100%;
+			}
+
+			.page-title {
+				margin: 0;
+				padding: 15px 15px 14px;
+				background-color: @clouds;
+				border-bottom: 1px solid lighten(@silver, 8%);
+
+				h4 {
+					margin: 0;
+					color: @asbestos;
+
+					small {
+						color: @silver;
+					}
+				}
+			}
+
+			.main-container {
+				padding-top: 20px;
+				padding-bottom: 40px;
+				background-color: @content-bg;
+
+				.breadcrumb {
+					background-color: @clouds;
+
+					a {
+						text-decoration: none;
+						color: @midnight;
+
+						&:hover {
+							color: lighten(@midnight, 30%);
+						}
+					}
+				}
+			}
+		}
+
+		.has-sidebar {
+
+			> [class^=col-] {
+				padding: 0;
+			}
+
+			.page-title, .main-container {
+				border-right: 1px solid lighten(@silver, 8%);
+				border-left: 1px solid lighten(@silver, 8%);
+			}
+
+			.sidebar {
+				padding: 10px;
+
+				.sidebar-section {
+					border-bottom: 1px dashed @silver;
+					padding-bottom: 15px;
+					margin-bottom: 15px;
+
+					> *:last-child {
+						margin-bottom: 0;
+					}
+				}
+
+				&.sidebar-fixed {
+					z-index: 9;
+				}
+			}
+
+			/* Fixes sidebar width when fixed to viewport and scrolling. */
+			.col-sm-1 {
+
+				.sidebar {
+
+					&.scrolling {
+						width: 8.33333% !important;
+					}
+				}
+			}
+
+			/* Fixes sidebar width when fixed to viewport and scrolling. */
+			.col-sm-2 {
+
+				.sidebar {
+
+					&.scrolling {
+						width: 16.7% !important;
+					}
+				}
+			}
+
+			/* Fixes sidebar width when fixed to viewport and scrolling. */
+			.col-sm-3 {
+
+				.sidebar {
+
+					&.scrolling {
+						width: 25% !important;
+					}
+				}
+			}
+
+			/* Fixes sidebar width when fixed to viewport and scrolling. */
+			.col-sm-4 {
+
+				.sidebar {
+
+					&.scrolling {
+						width: 33.3% !important;
+					}
+				}
+			}
+
+			/* Fixes sidebar width when fixed to viewport and scrolling. */
+			.col-sm-5 {
+
+				.sidebar {
+
+					&.scrolling {
+						width: 41.7% !important;
+					}
+				}
+			}
+
+			/* Fixes sidebar width when fixed to viewport and scrolling. */
+			.col-sm-6 {
+
+				.sidebar {
+
+					&.scrolling {
+						width: 50% !important;
+					}
+				}
+			}
+
+			/* Fixes sidebar width when fixed to viewport and scrolling. */
+			.col-sm-7 {
+
+				.sidebar {
+
+					&.scrolling {
+						width: 58.3% !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: @screen-xs-max) {
+
+	/* Resets sidebar to 100% on mobile view if it's been fixed to the viewport. */
+	html, body {
+
+		.wrapper {
+
+			.has-sidebar {
+
+				.main-container {
+					padding-bottom: 0px !important;
+				}
+
+				.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7 {
+
+					.sidebar {
+						width: 100% !important;
+
+						&.scrolling {
+							width: 100% !important;
+						}
+					}
+				}
+			}
+
+			.sidebar {
+				position: static !important;
+
+				&.sidebar-fixed {
+					margin-top: 20px !important;
+				}
+			}
+		}
+	}
+}

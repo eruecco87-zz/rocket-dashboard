@@ -1,0 +1,576 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Rocket Dashboard</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/pace/themes/pace-theme-flat-top.css">
+        <link rel="stylesheet" href="bower_components/messenger/build/css/messenger.css">
+        <link rel="stylesheet" href="bower_components/messenger/build/css/messenger-theme-flat.css">
+        <link rel="stylesheet" href="bower_components/bower-jvectormap/jquery-jvectormap-1.2.2.css">
+        <link rel="stylesheet" href="bower_components/dynatable/jquery.dynatable.css">
+        <link rel="stylesheet" href="bower_components/morris.js/morris.css">
+        <link rel="stylesheet" href="bower_components/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css">
+        <link rel="stylesheet" href="bower_components/bootstrap-datepicker/css/datepicker3.css">
+        <link rel="stylesheet" href="bower_components/ion.rangeSlider/css/ion.rangeSlider.css">
+        <link rel="stylesheet" href="bower_components/ion.rangeSlider/css/ion.rangeSlider.skinNice.css">
+        <link rel="stylesheet" href="bower_components/jquery-minicolors/jquery.minicolors.css">
+        <link rel="stylesheet" href="bower_components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css">
+        <link rel="stylesheet" href="bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css">
+        <link rel="stylesheet" href="bower_components/icheck/skins/all.css">
+        <link rel="stylesheet" href="bower_components/bootstrap-select/bootstrap-select.min.css">
+        <link rel="stylesheet" href="bower_components/bootstrapValidator/dist/css/bootstrapValidator.min.css">
+        <link rel="stylesheet" href="bower_components/ladda-bootstrap/dist/ladda.min.css">
+        <link rel="stylesheet" href="bower_components/bootstrap3-wysihtml5-bower/dist/bootstrap3-wysihtml5.min.css">
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/rocket-dashboard.css -->
+        <link rel="stylesheet" href="styles/rocket-dashboard.css">
+        <!-- endbuild -->
+        <!-- build:js scripts/modernizr.js -->
+        <!-- bower:js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+    </head>
+    <body>
+
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="navmenu navmenu-inverse navmenu-fixed-left" role="navigation">
+
+            <div class="navmenu-holder">
+
+                <div class="user-box">
+                    <a href="#"><img src="images/avatars/bruce-wayne.jpg" alt="username" class="img-circle"></a>
+                    <h5>Hello, Bruce!</h5>
+                </div> <!-- /.user-box -->
+
+                <ul class="nav navmenu-nav top-level">
+
+                    <li><a href="index.html"><i class="fa fa-dashboard"></i><span>Dashboard</span></a> <span class="badge alert-success">New</span></li>
+
+                    <li class="active" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-laptop"></i><span>UI Elements <b class="caret"></b></span></a>
+                        <ul class="dropdown-menu navmenu-nav">
+                            <li><a href="general.html">General</a></li>
+                            <li><a href="icons.html">Icons</a></li>
+                            <li class="active"><a href="buttons.html">Buttons</a></li>
+                            <li><a href="forms.html">Forms</a></li>
+                            <li><a href="tables.html">Tables</a></li>
+                        </ul>
+                    </li> <!-- /.dropdown -->
+
+                    <li><a href="containers.html"><i class="fa fa-th"></i><span>Containers</span></a> <span class="badge alert-danger">4</span></li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-rocket"></i><span>Examples <b class="caret"></b></span></a>
+                        <ul class="dropdown-menu navmenu-nav">
+                            <li><a href="profile.html">User Profile</a></li>
+                            <li><a href="settings.html">Settings</a></li>
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="register.html">Register</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Advanced Examples</li>
+                            <li><a href="invoice.html">Invoice</a></li>
+                            <li><a href="lock.html">Lockscreeen</a></li>
+                            <li><a href="blank.html">Blank</a></li>
+                        </ul>
+                    </li> <!-- /.dropdown -->
+
+                </ul> <!-- /.navmenu-nav -->
+
+            </div> <!-- /.navmenu-holder -->
+
+        </div> <!-- /.navmenu -->
+
+        <div class="wrapper">
+
+            <div class="top-nav navbar navbar-default" role="navigation">
+
+                <div class="container-fluid">
+
+                    <div class="navbar-header">
+
+                        <a class="navbar-brand off-canvas-toggle" href="#" data-toggle="offcanvas" data-autohide="true" data-recalc="false" data-disable-scrolling="true" data-target=".navmenu" data-canvas=".wrapper">
+                            <i class="fa fa-bars"></i> Rocket Dashboard</a>
+
+                    </div> <!-- /.navbar-header -->
+
+                    <div class="navbar-right">
+
+                        <ul class="nav navbar-nav">
+
+                            <li class="dropdown">
+
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i><span class="badge alert-danger">1</span></a>
+
+                                <ul class="dropdown-menu dropdown-messages">
+                                    <li class="dropdown-header">You have 1 new message</li>
+
+                                    <li>
+
+                                        <div class="dropdown-holder">
+
+                                            <ul class="nav">
+
+                                                <li class="message alert-info">
+                                                    <a href="#">
+                                                        <span class="message-time"><i class="fa fa-clock-o"></i> 5 min</span>
+                                                        <span class="message-title">Victor Stone</span>
+                                                        <span class="message-excerpt">Lorem ipsum dolor st amet...</span>
+                                                    </a>
+                                                </li> <!-- /.message -->
+
+                                                <li class="message">
+                                                    <a href="#">
+                                                        <span class="message-time"><i class="fa fa-clock-o"></i> 1 hour</span>
+                                                        <span class="message-title">Diana Prince</span>
+                                                        <span class="message-excerpt">Lorem ipsum dolor st amet...</span>
+                                                    </a>
+                                                </li> <!-- /.message -->
+
+                                                <li class="message">
+                                                    <a href="#">
+                                                        <span class="message-time"><i class="fa fa-clock-o"></i> 2 days</span>
+                                                        <span class="message-title">Wally West</span>
+                                                        <span class="message-excerpt">Lorem ipsum dolor st amet...</span>
+                                                    </a>
+                                                </li> <!-- /.message -->
+
+                                                <li class="message">
+                                                    <a href="#">
+                                                        <span class="message-time"><i class="fa fa-clock-o"></i> 5 days</span>
+                                                        <span class="message-title">Clark Kent</span>
+                                                        <span class="message-excerpt">Lorem ipsum dolor st amet...</span>
+                                                    </a>
+                                                </li> <!-- /.message -->
+
+                                                <li class="message">
+                                                    <a href="#">
+                                                        <span class="message-time"><i class="fa fa-clock-o"></i> 5 days</span>
+                                                        <span class="message-title">Diana Prince</span>
+                                                        <span class="message-excerpt">Lorem ipsum dolor st amet...</span>
+                                                    </a>
+                                                </li> <!-- /.message -->
+
+                                            </ul> <!-- /.nav -->
+
+                                        </div> <!-- /.dropdown-holder -->
+
+                                    </li>
+                                    <li class="dropdown-footer"><a href="#">See All Messages</a></li>
+                                </ul> <!-- /.dropdown-messages -->
+
+                            </li> <!-- /.dropdown -->
+
+                            <li class="dropdown">
+
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-warning"></i><span class="badge alert-warning">9</span></a>
+
+                                <ul class="dropdown-menu dropdown-notifications">
+                                    <li class="dropdown-header">You have 9 notifications</li>
+                                    <li>
+
+                                        <div class="dropdown-holder">
+
+                                            <ul class="nav">
+
+                                                <li class="notification">
+                                                    <a href="#">
+                                                        <i class="fa fa-info-circle"></i>
+                                                        <span class="notification-excerpt">Lorem ipsum dolor st amet...</span>
+                                                    </a>
+                                                </li> <!-- /.notification -->
+
+                                                <li class="notification alert-success">
+                                                    <a href="#">
+                                                        <i class="fa fa-check-circle"></i>
+                                                        <span class="notification-excerpt">Lorem ipsum dolor st amet...</span>
+                                                    </a>
+                                                </li> <!-- /.notification -->
+
+                                                <li class="notification">
+                                                    <a href="#">
+                                                        <i class="fa fa-info-circle"></i>
+                                                        <span class="notification-excerpt">Lorem ipsum dolor st amet...</span>
+                                                    </a>
+                                                </li> <!-- /.notification -->
+
+                                                <li class="notification">
+                                                    <a href="#">
+                                                        <i class="fa fa-info-circle"></i>
+                                                        <span class="notification-excerpt">Lorem ipsum dolor st amet...</span>
+                                                    </a>
+                                                </li> <!-- /.notification -->
+
+                                                <li class="notification">
+                                                    <a href="#">
+                                                        <i class="fa fa-info-circle"></i>
+                                                        <span class="notification-excerpt">Lorem ipsum dolor st amet...</span>
+                                                    </a>
+                                                </li> <!-- /.notification -->
+
+                                                <li class="notification alert-danger">
+                                                    <a href="#">
+                                                        <i class="fa fa-ban"></i>
+                                                        <span class="notification-excerpt">Lorem ipsum dolor st amet...</span>
+                                                    </a>
+                                                </li> <!-- /.notification -->
+
+                                                <li class="notification alert-warning">
+                                                    <a href="#">
+                                                        <i class="fa fa-exclamation-circle"></i>
+                                                        <span class="notification-excerpt">Lorem ipsum dolor st amet...</span>
+                                                    </a>
+                                                </li> <!-- /.notification -->
+
+                                                <li class="notification">
+                                                    <a href="#">
+                                                        <i class="fa fa-info-circle"></i>
+                                                        <span class="notification-excerpt">Lorem ipsum dolor st amet...</span>
+                                                    </a>
+                                                </li> <!-- /.notification -->
+
+                                                <li class="notification">
+                                                    <a href="#">
+                                                        <i class="fa fa-info-circle"></i>
+                                                        <span class="notification-excerpt">Lorem ipsum dolor st amet...</span>
+                                                    </a>
+                                                </li> <!-- /.notification -->
+
+                                            </ul> <!-- /.nav -->
+
+                                        </div> <!-- /.dropdown-holder -->
+
+                                    </li>
+                                    <li class="dropdown-footer"><a href="#">See All Notifications</a></li>
+                                </ul> <!-- /.dropdown-notifications -->
+
+                            </li> <!-- /.dropdown -->
+
+                            <li class="dropdown">
+
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tasks"></i><span class="badge alert-info">6</span></a>
+
+                                <ul class="dropdown-menu dropdown-tasks">
+                                    <li class="dropdown-header">There are 6 pending tasks</li>
+                                    <li>
+
+                                        <div class="dropdown-holder">
+
+                                            <ul class="nav">
+
+                                                <li class="task">
+                                                    <a href="#">
+                                                        <span class="task-title">Lorem ipsum dolor st amet... <small>10%</small></span>
+                                                        <div class="progress xs">
+                                                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                            <span class="sr-only">60% Complete</span>
+                                                          </div>
+                                                        </div>
+                                                    </a>
+                                                </li> <!-- /.task -->
+
+                                                <li class="task">
+                                                    <a href="#">
+                                                        <span class="task-title">Lorem ipsum dolor st amet... <small>10%</small></span>
+                                                        <div class="progress xs">
+                                                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                            <span class="sr-only">60% Complete</span>
+                                                          </div>
+                                                        </div>
+                                                    </a>
+                                                </li> <!-- /.task -->
+
+                                                <li class="task">
+                                                    <a href="#">
+                                                        <span class="task-title">Lorem ipsum dolor st amet... <small>10%</small></span>
+                                                        <div class="progress xs">
+                                                          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                            <span class="sr-only">60% Complete</span>
+                                                          </div>
+                                                        </div>
+                                                    </a>
+                                                </li> <!-- /.task -->
+
+                                                <li class="task">
+                                                    <a href="#">
+                                                        <span class="task-title">Lorem ipsum dolor st amet... <small>10%</small></span>
+                                                        <div class="progress xs">
+                                                          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                            <span class="sr-only">60% Complete</span>
+                                                          </div>
+                                                        </div>
+                                                    </a>
+                                                </li> <!-- /.task -->
+
+                                                <li class="task">
+                                                    <a href="#">
+                                                        <span class="task-title">Lorem ipsum dolor st amet... <small>10%</small></span>
+                                                        <div class="progress xs">
+                                                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                            <span class="sr-only">60% Complete</span>
+                                                          </div>
+                                                        </div>
+                                                    </a>
+                                                </li> <!-- /.task -->
+
+                                                <li class="task">
+                                                    <a href="#">
+                                                        <span class="task-title">Lorem ipsum dolor st amet... <small>10%</small></span>
+                                                        <div class="progress xs">
+                                                          <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                            <span class="sr-only">60% Complete</span>
+                                                          </div>
+                                                        </div>
+                                                    </a>
+                                                </li> <!-- /.task -->
+
+                                            </ul> <!-- /.nav -->
+
+                                        </div> <!-- /.dropdown-holder -->
+
+                                    </li>
+                                    <li class="dropdown-footer"><a href="#">See All Tasks</a></li>
+                                </ul> <!-- /.dropdown-tasks -->
+
+                            </li> <!-- /.dropdown -->
+
+                        </ul> <!-- /.navbar-nav -->
+
+                    </div> <!-- /.navbar-right -->
+
+                </div> <!-- /.container-fluid -->
+
+            </div> <!-- /.top-nav -->
+
+            <nav class="bottom-nav navbar navbar-default" role="navigation">
+
+                <div class="container-fluid">
+
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bottom-nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div> <!-- /.navbar-header -->
+
+                    <div class="collapse navbar-collapse" id="bottom-nav-collapse">
+
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">Home</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li class="active"><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">One more separated link</a></li>
+                                </ul>
+                            </li> <!-- /.dropdown -->
+                            <li class="active"><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                        </ul> <!-- /.navbar-nav -->
+
+                        <form class="navbar-form navbar-right" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                        </form>
+
+                    </div> <!-- /.collapse -->
+
+                </div> <!-- /.container-fluid -->
+
+            </nav> <!-- /.bottom-nav -->
+
+            <div class="page-container">
+
+                <div class="page-title">
+
+                    <h4>Buttons <small>Bootstrap &amp; Enhancements</small></h4>
+
+                </div> <!-- /.page-title -->
+
+                <div class="container-fluid main-container">
+
+                    <ol class="breadcrumb">
+                        <li>UI Elements</li>
+                        <li class="active">Buttons</li>
+                    </ol> <!-- /.breadcrumb -->
+
+                    <div class="row">
+
+                        <div class="col-sm-6">
+
+                            <div class="page-header">
+                                <h3>Regular Buttons <small>Bundled with Bootstrap</small></h3>
+                            </div> <!-- /.page-header -->
+
+                            <div class="alert alert-info">
+                                <p>You can find bootstrap's button documentation <a href="http://getbootstrap.com/css/#buttons" target="_blank">here</a>. And also bootstrap's javascript button functionality <a href="http://getbootstrap.com/javascript/#buttons" target="_blank">here</a>.</p>
+                            </div>
+
+                            <div class="box box-clear">
+
+                                <div class="box-content">
+
+                                    <!-- Standard button -->
+                                    <button type="button" class="btn btn-default">Default</button>
+
+                                    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                                    <button type="button" class="btn btn-primary">Primary</button>
+
+                                    <!-- Indicates a successful or positive action -->
+                                    <button type="button" class="btn btn-success">Success</button>
+
+                                    <!-- Contextual button for informational alert messages -->
+                                    <button type="button" class="btn btn-info">Info</button>
+
+                                    <!-- Indicates caution should be taken with this action -->
+                                    <button type="button" class="btn btn-warning">Warning</button>
+
+                                    <!-- Indicates a dangerous or potentially negative action -->
+                                    <button type="button" class="btn btn-danger">Danger</button>
+
+                                </div> <!-- /.box-content -->
+
+                            </div> <!-- /.box -->
+
+                            <div class="page-header">
+                                <h3>Jasny Buttons <small>Enhancements by <a href="http://jasny.github.io/bootstrap" target="_blank">jasny</a></small></h3>
+                            </div> <!-- /.page-header -->
+
+                            <div class="alert alert-info">
+                                <p>You can find jasny's button documentation <a href="http://jasny.github.io/bootstrap/css/#buttons" target="_blank">here</a>.</p>
+                            </div>
+
+                            <div class="box box-clear">
+
+                                <div class="box-content">
+
+                                    <!-- Standard button with label -->
+                                    <button type="button" class="btn btn-labeled btn-default"><span class="btn-label"><i class="glyphicon glyphicon-arrow-left"></i></span>Left</button>
+
+                                    <!-- Standard button with label on the right side -->
+                                    <button type="button" class="btn btn-labeled btn-default">Right<span class="btn-label btn-label-right"><i class="glyphicon glyphicon-arrow-right"></i></span></button>
+
+                                    <!-- Success button with label -->
+                                    <button type="button" class="btn btn-labeled btn-success"><span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>Success</button>
+
+                                    <!-- Danger button with label -->
+                                    <button type="button" class="btn btn-labeled btn-danger"><span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>Danger</button>
+
+                                </div> <!-- /.box-content -->
+
+                            </div> <!-- /.box -->
+
+                        </div> <!-- /.col-sm-6 -->
+
+                        <div class="col-sm-6">
+
+                            <div class="page-header">
+                                <h3>Ladda Bootstrap</h3>
+                            </div> <!-- /.page-header -->
+
+                            <div class="alert alert-info">
+                                <p>You can find Ladda's button documentation <a href="http://msurguy.github.io/ladda-bootstrap/" target="_blank">here</a>.</p>
+                            </div>
+
+                            <div class="box box-clear">
+
+                                <div class="box-content">
+
+                                    <button class="btn btn-primary ladda-button" data-style="expand-left"><span class="ladda-label">expand-left</span></button>
+                                    <button class="btn btn-primary ladda-button" data-style="expand-right"><span class="ladda-label">expand-right</span></button>
+                                    <button class="btn btn-primary ladda-button" data-style="expand-up"><span class="ladda-label">expand-up</span></button>
+                                    <button class="btn btn-primary ladda-button" data-style="expand-down"><span class="ladda-label">expand-down</span></button>
+
+                                </div> <!-- /.box-content -->
+
+                            </div> <!-- /.box -->
+
+                            <div class="box box-clear">
+
+                                <div class="box-content">
+
+                                    <button class="btn btn-danger ladda-button" data-style="slide-left" data-size="l"><span class="ladda-label">slide-left</span></button>
+                                    <button class="btn btn-danger ladda-button" data-style="slide-right" data-size="l"><span class="ladda-label">slide-right</span></button>
+                                    <button class="btn btn-danger ladda-button" data-style="slide-up" data-size="l"><span class="ladda-label">slide-up</span></button>
+                                    <button class="btn btn-danger ladda-button" data-style="slide-down" data-size="l"><span class="ladda-label">slide-down</span></button>
+
+                                </div> <!-- /.box-content -->
+
+                            </div> <!-- /.box -->
+
+                        </div> <!-- /.col-sm-6 -->
+
+                    </div> <!-- /.row -->
+
+                </div> <!-- /.main-container -->
+
+            </div> <!-- /.page-container -->
+
+        </div> <!-- /.wrapper -->
+
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
+        <script src="bower_components/raphael/raphael-min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bower_components/bootstrap-jasny/dist/js/jasny-bootstrap.min.js"></script>
+        <script src="bower_components/momentjs/min/moment.min.js"></script>
+        <script src="bower_components/moment-range/lib/moment-range.js"></script>
+        <script src="bower_components/slimScroll/jquery.slimscroll.min.js"></script>
+        <script src="bower_components/pace/pace.min.js"></script>
+        <script src="bower_components/spin.js/spin.js"></script>
+        <script src="bower_components/spin.js/jquery.spin.js"></script>
+        <script src="bower_components/messenger/build/js/messenger.min.js"></script>
+        <script src="bower_components/messenger/build/js/messenger-theme-flat.js"></script>
+        <script src="bower_components/bower-jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+        <script src="bower_components/bower-jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+        <script src="bower_components/dynatable/jquery.dynatable.js"></script>
+        <script src="bower_components/morris.js/morris.min.js"></script>
+        <script src="bower_components/jquery-knob/js/jquery.knob.js"></script>
+        <script src="bower_components/peity/jquery.peity.min.js"></script>
+        <script src="bower_components/x-editable/dist/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+        <script src="bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+        <script src="bower_components/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
+        <script src="bower_components/jquery-minicolors/jquery.minicolors.min.js"></script>
+        <script src="bower_components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+        <script src="bower_components/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+        <script src="bower_components/icheck/icheck.min.js"></script>
+        <script src="bower_components/bootstrap-select/bootstrap-select.min.js"></script>
+        <script src="bower_components/bootstrapValidator/dist/js/bootstrapValidator.min.js"></script>
+        <script src="bower_components/ladda-bootstrap/dist/ladda.min.js"></script>
+        <script src="bower_components/bootstrap3-wysihtml5-bower/dist/bootstrap3-wysihtml5.all.min.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js scripts/rocket-dashboard.js -->
+        <script src="scripts/rocket-dashboard.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/pages/buttons.js -->
+        <script src="scripts/pages/buttons.js"></script>
+        <!-- endbuild -->
+
+    </body>
+</html>

@@ -1,0 +1,647 @@
+//
+// Containers
+// --------------------------------------------------
+
+.jumbotron {
+    border-radius: 4px;
+    box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.15);
+
+    &.small-pad {
+      padding: 10px;
+    }
+}
+
+.box {
+    background: @white;
+    position: relative;
+    border-top: 4px solid @concrete;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    width: 100%;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, .2);
+
+    &.box-primary {
+        border-top-color: @midnight;
+
+        .box-header {
+            background-color: lighten(@midnight, 20%);
+
+            .box-title {
+                color: @white;
+            }
+
+            .btn-primary {
+                background-color: @midnight;
+                border-color: darken(@midnight, 5%);
+
+                &:hover {
+                    background-color: darken(@midnight, 3%);
+                    border-color: darken(@midnight, 7%);
+                }
+            }
+
+            .box-tabs {
+
+                li {
+
+                    a {
+                        color: @midnight;
+                    }
+                }
+
+                .active {
+
+                    a {
+                        background-color: @midnight;
+                        color: @white;
+                    }
+                }
+            }
+        }
+    }
+
+    &.box-info {
+        border-top-color: @river;
+
+        .box-header {
+            background-color: lighten(@river, 20%);
+
+            .box-title {
+                color: @white;
+            }
+
+            .box-tabs {
+
+                li {
+
+                    a {
+                        color: @river;
+                    }
+                }
+
+                .active {
+
+                    a {
+                        background-color: @river;
+                        color: @white;
+                    }
+                }
+            }
+        }
+    }
+
+    &.box-danger {
+        border-top-color: @alizarin;
+
+        .box-header {
+            background-color: lighten(@alizarin, 20%);
+
+            .box-title {
+                color: @white;
+            }
+
+            .box-tabs {
+
+                li {
+
+                    a {
+                        color: @alizarin;
+                    }
+                }
+
+                .active {
+
+                    a {
+                        background-color: @alizarin;
+                        color: @white;
+                    }
+                }
+            }
+        }
+    }
+
+    &.box-warning {
+        border-top-color: @orange;
+
+        .box-header {
+            background-color: lighten(@orange, 20%);
+
+            .box-title {
+                color: @white;
+            }
+
+            .box-tabs {
+
+                li {
+
+                    a {
+                        color: @orange;
+                    }
+                }
+
+                .active {
+
+                    a {
+                        background-color: @orange;
+                        color: @white;
+                    }
+                }
+            }
+        }
+    }
+
+    &.box-success {
+        border-top-color: @nephritis;
+
+        .box-header {
+            background-color: lighten(@nephritis, 20%);
+
+            .box-title {
+                color: @white;
+            }
+
+            .box-tabs {
+
+                li {
+
+                    a {
+                        color: @nephritis;
+                    }
+                }
+
+                .active {
+
+                    a {
+                        background-color: @nephritis;
+                        color: @white;
+                    }
+                }
+            }
+        }
+    }
+
+    &.box-clear {
+        border-color: @white;
+
+        .box-header {
+            background-color: @white;
+
+            .box-title {
+                color: @midnight;
+            }
+
+            .box-buttons {
+
+                .btn-default {
+                    background-color: transparent;
+                    border-color: darken(@concrete, 5%);
+
+                    &:hover {
+                        background-color: darken(@clouds, 5%);
+                        border-color: darken(@concrete, 10%);
+                    }
+                }
+            }
+        }
+    }
+
+    .box-header {
+    	.clearfix();
+        background-color: lighten(@concrete, 20%);
+        color: @white;
+        position: relative;
+        border-bottom: 1px solid @clouds;
+        padding-bottom: 2px;
+
+        .box-title {
+            display: inline-block;
+            padding: 10px 0px 10px 10px;
+            margin: 0;
+            color: @asbestos;
+            font-weight: normal;
+            width: 70%;
+        }
+
+        .box-buttons {
+            padding: 5px 10px 5px 5px;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            button:focus {
+            	outline: none;
+            }
+
+            .btn-default {
+                background-color: @concrete;
+                border-color: darken(@concrete, 5%);
+
+                &:hover {
+                    background-color: darken(@concrete, 5%);
+                    border-color: darken(@concrete, 10%);
+                }
+            }
+        }
+
+        .box-tabs {
+            margin-right: 10px;
+            position: absolute;
+            top: 5px;
+            right: 0;
+
+            li {
+
+                a {
+                    color: @concrete;
+                    padding: 4px 10px;
+                }
+            }
+
+            .active {
+
+                a {
+                    background-color: @concrete;
+                    color: @white;
+                }
+            }
+        }
+    }
+
+    .box-content {
+        padding: 10px;
+        word-break: break-word;
+
+        &.full-width {
+            padding: 0;
+        }
+
+        .tab-full-width {
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+
+        .no-footer {
+            width: 100%;
+            border-radius: 0 0 4px 4px;
+
+            .jvectormap-container {
+                border-radius: 0 0 4px 4px;
+            }
+        }
+    }
+
+    .box-footer {
+        border-top: 1px solid @clouds;
+        border-radius: 0 0 4px 4px;
+        padding: 10px;
+    }
+}
+
+.widget {
+    background: @white;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    width: 100%;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, .2);
+
+    &.widget-primary {
+
+        .widget-header {
+            background-color: @midnight;
+
+            .btn-primary {
+                background-color: @midnight;
+                border-color: darken(@midnight, 3%);
+
+                &:hover {
+                    background-color: darken(@midnight, 3%);
+                    border-color: darken(@midnight, 6%);
+                }
+            }
+        }
+    }
+
+    &.widget-info {
+
+        .widget-header {
+            background-color: @river;
+        }
+    }
+
+    &.widget-danger {
+
+        .widget-header {
+            background-color: @alizarin;
+        }
+    }
+
+    &.widget-warning {
+
+        .widget-header {
+            background-color: @orange;
+        }
+    }
+
+    &.widget-success {
+
+        .widget-header {
+            background-color: @nephritis;
+        }
+    }
+
+    &.widget-clear {
+
+        .widget-header {
+            background-color: @white;
+
+            .widget-title {
+                color: @midnight;
+            }
+
+            .widget-buttons {
+
+                .btn-default {
+                    background-color: transparent;
+                    border-color: darken(@concrete, 5%);
+
+                    &:hover {
+                        background-color: darken(@clouds, 5%);
+                        border-color: darken(@concrete, 10%);
+                    }
+                }
+            }
+        }
+    }
+
+    .widget-header {
+        .clearfix();
+        background: @concrete;
+        color: @white;
+        position: relative;
+        border-radius: 4px 4px 0 0;
+        border-bottom: 1px solid @clouds;
+        padding-bottom: 2px;
+
+        .widget-title {
+            display: inline-block;
+            padding: 10px 0px 10px 10px;
+            margin: 0;
+            font-weight: normal;
+            width: 70%;
+        }
+
+        .widget-buttons {
+            padding: 8px 10px 5px 5px;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            button:focus {
+                outline: none;
+            }
+
+            .btn-default {
+                background-color: @concrete;
+                border-color: darken(@concrete, 5%);
+
+                &:hover {
+                    background-color: darken(@concrete, 5%);
+                    border-color: darken(@concrete, 10%);
+                }
+            }
+        }
+    }
+
+    .widget-content {
+        padding: 10px;
+        word-break: break-word;
+
+        &.full-width {
+            padding: 0;
+        }
+
+        .no-footer {
+            width: 100%;
+            border-radius: 0 0 4px 4px;
+
+            .jvectormap-container {
+                border-radius: 0 0 4px 4px;
+            }
+        }
+    }
+
+    .widget-footer {
+        border-top: 1px solid @clouds;
+        border-radius: 0 0 4px 4px;
+        padding: 10px;
+    }
+}
+
+.tile {
+    background-color: @concrete;
+    color: @white;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    width: 100%;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, .2);
+
+    &.tile-primary {
+        background-color: @midnight;
+
+        .tile-header {
+
+            .btn-primary {
+                background-color: @midnight;
+                border-color: darken(@midnight, 3%);
+
+                &:hover {
+                    background-color: darken(@midnight, 3%);
+                    border-color: darken(@midnight, 6%);
+                }
+            }
+        }
+    }
+
+    &.tile-info {
+        background-color: @river;
+    }
+
+    &.tile-danger {
+       background-color: @alizarin;
+    }
+
+    &.tile-warning {
+        background-color: @orange;
+    }
+
+    &.tile-success {
+        background-color: @nephritis;
+    }
+
+    &.tile-clear {
+        background-color: @white;
+        color: @midnight;
+
+        .tile-title {
+            color: @midnight;
+        }
+
+        .tile-header {
+
+            .tile-buttons {
+
+                .btn-default {
+                    background-color: transparent;
+                    border-color: darken(@concrete, 5%);
+
+                    &:hover {
+                        background-color: darken(@clouds, 5%);
+                        border-color: darken(@concrete, 10%);
+                    }
+                }
+            }
+        }
+    }
+
+    &.tile-stat {
+
+        .tile-content {
+            position: relative;
+
+            .stat-data {
+                margin: 0;
+            }
+
+            .stat-icon {
+                position: absolute;
+                top: -6px;
+                right: 6px;
+                color: rgba(0, 0, 0, 0.3);
+                font-size: 3em;
+            }
+        }
+
+        .tile-footer {
+            padding: 0;
+
+            a {
+                display: block;
+                text-align: center;
+                color: @white;
+                padding: 5px 0;
+                background: rgba(0,0,0,.3);
+                border-radius: 0 0 4px 4px;
+
+                &:hover, &:focus {
+                    text-decoration: none;
+                    background: rgba(0,0,0,.5);
+                }
+            }
+        }
+    }
+
+    .tile-header {
+        .clearfix();
+        color: @white;
+        position: relative;
+        border-radius: 4px 4px 0 0;
+        padding-bottom: 2px;
+
+        .tile-title {
+            display: inline-block;
+            padding: 10px 0px 10px 10px;
+            margin: 0;
+            font-weight: normal;
+            width: 70%;
+        }
+
+        .tile-buttons {
+            padding: 8px 10px 5px 5px;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            button:focus {
+                outline: none;
+            }
+
+            .btn-default {
+                background-color: @concrete;
+                border-color: darken(@concrete, 5%);
+
+                &:hover {
+                    background-color: darken(@concrete, 5%);
+                    border-color: darken(@concrete, 10%);
+                }
+            }
+        }
+    }
+
+    .tile-content {
+        padding: 10px;
+        word-break: break-word;
+
+        &.full-width {
+            padding: 0;
+        }
+
+        .no-footer {
+            width: 100%;
+            border-radius: 0 0 4px 4px;
+
+            .jvectormap-container {
+                border-radius: 0 0 4px 4px;
+            }
+        }
+    }
+
+    .tile-footer {
+        border-radius: 0 0 4px 4px;
+        padding: 10px;
+    }
+}
+
+.container-collapsed {
+
+    .widget-header, .tile-header {
+        border-bottom: 0;
+        border-radius: 4px;
+    }
+
+    .box-header {
+        border-bottom: 0;
+        border-radius: 0 0 4px 4px;
+    }
+
+    .widget-content, .tile-content, .box-content {
+        display: none;
+    }
+
+    .widget-footer, .tile-footer, .box-footer {
+        display: none;
+    }
+}
+
+.highlight-drop {
+
+    // jQuery UI styles.
+    .ui-state-highlight {
+        border: 1px dashed @midnight;
+        min-height: 50px;
+        margin-bottom: 20px;
+        background-color: @sunFlower;
+        opacity: 0.1;
+        border-radius: 4px;
+    }
+}
+
+// jQuery UI styles.
+.ui-sortable {
+    min-height: 50px;
+
+    .box-header, .widget-header, .tile-header {
+        cursor: move;
+    }
+}

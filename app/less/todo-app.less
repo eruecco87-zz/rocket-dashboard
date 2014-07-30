@@ -1,0 +1,100 @@
+//
+// To-Do App
+// --------------------------------------------------
+
+.todo-app {
+
+    .alert {
+	    text-align: center;
+	    display: none;
+	}
+
+	.add-task {
+	    margin-top: 15px;
+	}
+
+	.sort {
+	    margin: 10px 0;
+	    text-align: center;
+	    display: none;
+
+	    ul {
+		    display: inline;
+		
+		    a {
+		    	font-size: 14px;
+			    padding: 5px 10px;
+			}
+		}
+
+		.active {
+		    text-decoration: underline;
+		    font-weight: bold;
+		}
+	}
+
+	.list-group {
+	    margin-top: 15px;
+	    margin-bottom: 0;
+	}
+
+	.tasks-list .task {
+    	overflow: hidden;
+    	position: relative;
+    	background: lighten(@midnight, 70%);
+    	border-left: 4px solid @orange;
+
+    	&:hover {
+		    background: lighten(@sunFlower, 40%);
+
+		    .delete {
+			    visibility: visible;
+			}
+		}
+
+		.delete {
+		    color: #b94a48;
+		    visibility: hidden;
+		    position: absolute;
+		    top: 50%;
+		    font-size: 22px;
+		    margin-top: -16px;
+		}
+
+		.task-name {
+		    display: inline-block;
+		    width: 94%;;
+		    margin-left: 26px;
+		    line-height: 22px;
+		    padding-right: 20px;
+		}
+
+		.complete {
+		    margin-top: 15px;
+		    position: absolute;
+		    top: 50%;
+		    margin-top: -6px;
+		    right: 15px;
+		}
+
+		&.done .task-name {
+		    text-decoration: line-through;
+		    color: #999;
+		}
+	}
+
+	.info {
+	    margin-top: 15px;
+	    overflow: hidden;
+
+	    .pending-tasks {
+		    font-size: 14px;
+		    font-weight: bold;
+		    display: none;
+		}
+
+		.delete-all-complete {
+		    display: none;
+		}
+	}
+}
