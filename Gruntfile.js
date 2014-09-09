@@ -186,7 +186,7 @@ module.exports = function (grunt) {
         // Performs rewrites based on rev and the useminPrepare configuration
         usemin: {
             options: {
-                assetsDirs: ['<%= yeoman.dist %>']
+                assetsDirs: ['<%= yeoman.dist %>', '<%= yeoman.dist %>/images']
             },
             html: ['<%= yeoman.dist %>/{,*/}*.html'],
             css: ['<%= yeoman.dist %>/styles/{,*/}*.css']
@@ -292,7 +292,26 @@ module.exports = function (grunt) {
                         'fonts/{,*/}*.*',
                         'mock/{,*/}*.*'
                     ]
-                }]
+                },
+                {
+                  expand: true,
+                  dot: true,
+                  cwd: '<%= yeoman.app %>/bower_components/jquery-minicolors',
+                  dest: '<%= yeoman.dist %>/images/',
+                  src: [
+                    '*.{ico,png,txt}'
+                  ]
+                },
+                {
+                  expand: true,
+                  dot: true,
+                  cwd: '<%= yeoman.app %>/bower_components/iCheck/skins/flat',
+                  dest: '<%= yeoman.dist %>/images/',
+                  src: [
+                    '*.{ico,png,txt}'
+                  ]
+                }
+                ]
             },
             styles: {
                 expand: true,
