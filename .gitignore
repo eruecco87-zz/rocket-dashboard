@@ -3,5 +3,5 @@ node_modules
 .sass-cache
 app/bower_components
 test/bower_components
-
+.idea
 npm-debug.log
