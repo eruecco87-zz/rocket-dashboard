@@ -1,0 +1,16 @@
+.idea
+.tmp
+app
+node_modules
+
+.idea/encodings.xml
+
+.idea/misc.xml
+
+.idea/modules.xml
+
+.idea/rocket-dashboard.iml
+
+.idea/scopes/scope_settings.xml
+
+.idea/vcs.xml
