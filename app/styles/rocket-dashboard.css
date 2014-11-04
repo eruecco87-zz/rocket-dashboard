@@ -10505,6 +10505,48 @@ html .progress.xs,
 body .progress.xs {
   height: 6px;
 }
+html .icheckbox_flat-blue,
+body .icheckbox_flat-blue,
+html .iradio_flat-blue,
+body .iradio_flat-blue {
+  background-image: url("../images/blue.png");
+}
+html .icheckbox_flat-green,
+body .icheckbox_flat-green,
+html .iradio_flat-green,
+body .iradio_flat-green {
+  background-image: url("../images/green.png");
+}
+html .icheckbox_flat-grey,
+body .icheckbox_flat-grey,
+html .iradio_flat-grey,
+body .iradio_flat-grey {
+  background-image: url("../images/grey.png");
+}
+html .icheckbox_flat-orange,
+body .icheckbox_flat-orange,
+html .iradio_flat-orange,
+body .iradio_flat-orange {
+  background-image: url("../images/orange.png");
+}
+html .icheckbox_flat-pink,
+body .icheckbox_flat-pink,
+html .iradio_flat-pink,
+body .iradio_flat-pink {
+  background-image: url("../images/pink.png");
+}
+html .icheckbox_flat-red,
+body .icheckbox_flat-red,
+html .iradio_flat-red,
+body .iradio_flat-red {
+  background-image: url("../images/pink.png");
+}
+html .icheckbox_flat-yellow,
+body .icheckbox_flat-yellow,
+html .iradio_flat-yellow,
+body .iradio_flat-yellow {
+  background-image: url("../images/yellow.png");
+}
 html .wrapper,
 body .wrapper {
   overflow: hidden;
@@ -10736,6 +10778,7 @@ body .wrapper .has-sidebar .col-sm-7 .sidebar.scrolling {
   top: 85%;
   border-radius: 4px;
   background: transparent;
+  z-index: 10;
 }
 .top-nav .navbar-nav .dropdown-menu .dropdown-header {
   position: relative;
@@ -10980,7 +11023,7 @@ body .wrapper .has-sidebar .col-sm-7 .sidebar.scrolling {
   color: #bdc3c7;
 }
 .bottom-nav.bottom-nav-fixed {
-  z-index: 15;
+  z-index: 10;
   width: 100%;
 }
 @media screen and (max-width: 768px) {
